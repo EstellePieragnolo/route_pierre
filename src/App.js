@@ -3,26 +3,42 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+
+
+   componentDidMount() {
+      fetch('https://api-euwest.graphcms.com/v1/cjtfsm7n222qb01b99hezu8j5/master')
+         .then(response => response.json())
+         .then(data => this.setState({
+            items: data
+         }))
+         .catch(error => {
+            console.log(error);
+            this.setState({
+               error: true
+            });
+         });
+   }
+
+   render() {
+      return (
+         <div className="App">
+            <header className="App-header">
+               <img src={logo} className="App-logo" alt="logo" />
+               <p>
+                  Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
+               <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  Learn React
           </a>
-        </header>
-      </div>
-    );
-  }
+            </header>
+         </div>
+      );
+   }
 }
 
 export default App;
