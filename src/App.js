@@ -1,44 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './Header';
+import Home from './Home'
 import './App.css';
 
-class App extends Component {
+export default class App extends React.Component {
 
-
-   componentDidMount() {
-      fetch('https://api-euwest.graphcms.com/v1/cjtfsm7n222qb01b99hezu8j5/master')
-         .then(response => response.json())
-         .then(data => this.setState({
-            items: data
-         }))
-         .catch(error => {
-            console.log(error);
-            this.setState({
-               error: true
-            });
-         });
-   }
 
    render() {
       return (
          <div className="App">
-            <header className="App-header">
-               <img src={logo} className="App-logo" alt="logo" />
-               <p>
-                  Edit <code>src/App.js</code> and save to reload.
-          </p>
-               <a
-                  className="App-link"
-                  href="https://reactjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-               >
-                  Learn React
-          </a>
-            </header>
+            <Router>
+               <div>
+                  <Header />
+                  <main>
+                     <Route exact path='/' component={Home} />
+                  </main>
+               </div>
+            </Router>
          </div>
       );
    }
 }
 
-export default App;
+
