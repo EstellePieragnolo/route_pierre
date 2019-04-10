@@ -38,6 +38,8 @@
     }
 
     &Shop {
+        margin: 0 100px 0;
+
         &Title {
             font-size: 80px;
             text-align: center;
@@ -45,24 +47,61 @@
             margin: 210px 0 115px;
         }
 
-        &Items {
+        &Category {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            position: relative;
-            width: 360px;
+            margin: 0 0 150px;
 
-            img {
+            &Items {
+                position: relative;
                 margin: 0 40px;
+                width: 360px;
+                height: 360px;
+
+                &Image {}
+
+                &Hover {
+                    position: absolute;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #F5E77A;
+
+                    p {
+                        font-size: 35px;
+                    }
+                }
+
+                &:hover>&Hover {
+                    display: flex;
+                }
+            }
+        }
+
+        &Inspiration {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 0 155px 0;
+
+            &Title {
+                text-align: center;
+                font-size: 45px;
+                margin: 0 0 55px;
             }
 
-            &Hover {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #F5E77A;
+            &Description {
+                font-size: 22px;
+                line-height: 33px;
+                max-width: 1240px;
+                margin: 0 auto;
+                text-align: center;
+
             }
         }
     }

@@ -21,7 +21,7 @@ export default class Home extends React.Component {
         </div>
         <div className="homeShop">
           <h2 className="homeShopTitle">Le magasin</h2>
-          <div className="homeShopItems">
+          <div className="homeShopCategory">
             <Query query={items}>
               {({ data, loading, error }) => {
                 if (loading) return 'Loading';
@@ -29,20 +29,53 @@ export default class Home extends React.Component {
                 return (
                   data.introShops &&
                   data.introShops.map(introShop => {
-                    return <div key={introShop.id}>
-                      {
-                        introShop.image &&
-                        <img src={introShop.image.url} alt="shopCategories" width="360" />
-                      }
-                      <div className="homeShopItemsHover">
-                        <p>{introShop.category}</p>
+                    return (
+                      <div className="homeShopCategoryItems">
+                        {
+                          introShop.image &&
+                          <div key={introShop.id} className="homeShopCategoryItemsImage">
+                            <img src={introShop.image.url} alt="shopCategories" width="360" />
+                          </div>
+                        }
+
+                        <div className="homeShopCategoryItemsHover">
+                          <p>{introShop.category}</p>
+                        </div>
+
                       </div>
-                    </div>
+                    )
+
                   })
 
                 );
               }}
             </Query>
+          </div>
+          <div className="homeShopInspiration">
+            <Query query={inspiration}>
+              {({ data, loading, error }) => {
+                if (loading) return 'Loading';
+                if (error) return <p>ERROR</p>;
+                return (
+                  data.inspirations &&
+                  data.inspirations.map(inspiration => {
+                    return (
+                      <div>
+                        <h3 className="homeShopInspirationTitle">
+                          {inspiration.title}
+                        </h3>
+                        <p className="homeShopInspirationDescription">
+                          {inspiration.description}
+                        </p>
+                      </div>
+                    )
+
+                  })
+
+                );
+              }}
+            </Query>
+
           </div>
         </div>
       </div >
@@ -60,4 +93,14 @@ query {
     }
   }
 }
+`
+
+export const inspiration = gql`
+  query{
+    inspirations {
+      id
+      description
+      title
+    }
+  }
 `
