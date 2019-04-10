@@ -15,11 +15,11 @@ export default class Header extends React.Component {
                         Home
           </NavLink>
                     <NavLink
-                        to='/about'
+                        to='/Shop/'
                         className='Header-navLink'
                         activeClassName='Header-isActive'
                     >
-                        About
+                        Shop
           </NavLink>
                 </nav>
             </header>
