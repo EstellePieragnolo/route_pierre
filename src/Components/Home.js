@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from './Logo';
+import Inspirations from './Inspirations';
+import ShopCategories from './Shop/ShopCategories';
 import './_Home.scss';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
 
 export default class Home extends React.Component {
 
@@ -21,86 +21,12 @@ export default class Home extends React.Component {
         </div>
         <div className="homeShop">
           <h2 className="homeShopTitle">Le magasin</h2>
-          <div className="homeShopCategory">
-            <Query query={items}>
-              {({ data, loading, error }) => {
-                if (loading) return 'Loading';
-                if (error) return <p>ERROR</p>;
-                return (
-                  data.introShops &&
-                  data.introShops.map(introShop => {
-                    return (
-                      <div className="homeShopCategoryItems">
-                        {
-                          introShop.image &&
-                          <div key={introShop.id} className="homeShopCategoryItemsImage">
-                            <img src={introShop.image.url} alt="shopCategories" width="360" />
-                          </div>
-                        }
+          <ShopCategories />
 
-                        <div className="homeShopCategoryItemsHover">
-                          <p>{introShop.category}</p>
-                        </div>
+          <Inspirations />
 
-                      </div>
-                    )
-
-                  })
-
-                );
-              }}
-            </Query>
-          </div>
-          <div className="homeShopInspiration">
-            <Query query={inspiration}>
-              {({ data, loading, error }) => {
-                if (loading) return 'Loading';
-                if (error) return <p>ERROR</p>;
-                return (
-                  data.inspirations &&
-                  data.inspirations.map(inspiration => {
-                    return (
-                      <div>
-                        <h3 className="homeShopInspirationTitle">
-                          {inspiration.title}
-                        </h3>
-                        <p className="homeShopInspirationDescription">
-                          {inspiration.description}
-                        </p>
-                      </div>
-                    )
-
-                  })
-
-                );
-              }}
-            </Query>
-
-          </div>
         </div>
       </div >
     )
   }
 }
-
-export const items = gql`
-query {
-  introShops {
-    id,
-    category,
-    image {
-      url
-    }
-  }
-}
-`
-
-export const inspiration = gql`
-  query{
-    inspirations {
-      id
-      description
-      title
-    }
-  }
-`
