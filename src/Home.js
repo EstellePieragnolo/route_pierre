@@ -1,61 +1,47 @@
 import React from 'react';
 import gql from 'graphql-tag';
-import { graphql } from 'react-apollo';
+import { Query } from 'react-apollo';
 
 export default class Home extends React.Component {
 
+  render() {
+    return (
+      <Query query={creas}>
+        {({ data, loading, error }) => {
+          if (loading) return 'Loading';
+          if (error) return <p>ERROR</p>;
 
-    home = ({ data: { creas } }) => {
+          return (
+            data.creas &&
+            data.creas.map(crea => {
+              return <div key={crea.id}>
+                <p >{crea.id}</p>
+                <p> {crea.name}</p>
+                {
+                  crea.picture &&
+                  <img src={crea.picture.url} alt="" width="300" />
+                }
+              </div>
+            })
 
-        if (creas) {
-            return (
-                creas.map(crea => {
-                    return <p>{crea.name}</p>
-                })
+          );
+        }}
+      </Query>
+    );
 
-            )
-        }
-        return 'Loading posts...'
-    }
-
-
-
-
-    render() {
-        const home = HomeComponent;
-        return (
-            <div>
-                {this.home(home)}
-            </div>
-        )
-    }
-
+  }
 }
 
 export const creas = gql`
-query creas($first: Int, $skip: Int, $where: CreaWhereInput, $orderBy: CreaOrderByInput) {
-    creas: creasConnection(first: $first, skip: $skip, where: $where, orderBy: $orderBy) {
-      edges {
-        node {
-          id
-          name
-          picture {
-            fileName
-          }
-          description {
-            html
-          }
-        }
-      }
+query {
+  creas {
+    id,
+    name,
+    picture {
+      id,
+      url
     }
   }
+}
   
 `
-
-export const HomeComponent = (
-    graphql(creas, {
-        props: ({ data }) => ({
-            data
-        })
-    })
-)(Home)
