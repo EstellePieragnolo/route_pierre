@@ -1,34 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Arvo|Raleway");
-.home {
+.homeHeader {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
 }
-.homeHeader {
+.homeHeaderItems {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.homeHeaderLogo {
+.homeHeaderItemsLogo {
   position: absolute;
 }
-.homeHeaderTitle {
+.homeHeaderItemsTitle {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 90px;
   height: 427px;
   z-index: 2;
+  text-transform: uppercase;
 }
-.homeFooter {
+.homeHeaderSubtitle {
   margin: 161px 0 0;
   font-size: 38px;
   text-align: center;
   letter-spacing: 0.5px;
+}
+.homeShopTitle {
+  font-size: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 85px 0 115px;
 }
 
 * {
