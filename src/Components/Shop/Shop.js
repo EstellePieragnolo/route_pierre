@@ -12,8 +12,8 @@ export default class Shop extends React.Component {
                     if (error) return <p>ERROR</p>;
 
                     return (
-                        data.creas &&
-                        data.creas.map(crea => {
+                        data.creations &&
+                        data.creations.map(crea => {
                             return <div key={crea.id}>
                                 <p >{crea.id}</p>
                                 <p> {crea.name}</p>
@@ -34,7 +34,7 @@ export default class Shop extends React.Component {
 
 export const creas = gql`
     query {
-        creas {
+        creations {
             id,
             name,
             picture {
