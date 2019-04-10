@@ -1,0 +1,36 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+
+    &Header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &Logo {
+            position: absolute;
+        }
+
+        &Title {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 90px;
+            height: 427px;
+            z-index: 2;
+        }
+    }
+
+    &Footer {
+        margin: 161px 0 0;
+        font-size: 38px;
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+}

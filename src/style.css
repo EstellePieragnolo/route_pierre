@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Arvo|Raleway");
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.homeHeader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homeHeaderLogo {
+  position: absolute;
+}
+.homeHeaderTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  height: 427px;
+  z-index: 2;
+}
+.homeFooter {
+  margin: 161px 0 0;
+  font-size: 38px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+* {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: #666666;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Arvo", serif;
+}
+
+h1,
+h2,
+p {
+  font-family: "Raleway", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

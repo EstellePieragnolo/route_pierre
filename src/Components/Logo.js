@@ -8,18 +8,16 @@ export default class Logo extends React.Component {
     return (
       <Query query={logo}>
         {({ data, loading, error }) => {
-          if (loading) return 'Loading';
+          if (loading) return null;
           if (error) return <p>ERROR</p>;
 
           return (
             data.logoes &&
             data.logoes.map(logos => {
-              return <div key={logos.id}>
-                {
-                  logos.logo &&
-                  <img src={logos.logo.url} alt="" width="300" />
-                }
-              </div>
+              return (
+                logos.logo &&
+                <img key={logos.id} src={logos.logo.url} alt="" height="427" />
+              )
             })
 
           );
