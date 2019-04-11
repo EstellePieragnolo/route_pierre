@@ -108,7 +108,7 @@
 
 
 /* ----------- Non-Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (min-device-height: 750px) {
+@media screen and (min-width: 1200px) and (min-height: 750px) {
     .home {
         &Header {
             &Items {
@@ -121,7 +121,7 @@
 }
 
 /* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (max-device-height: 750px) {
+@media screen and (min-width: 1200px) and (max-height: 750px) {
     .home {
         &Header {
 
