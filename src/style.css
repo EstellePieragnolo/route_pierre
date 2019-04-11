@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  padding: 0 100px;
 }
 .homeHeaderItems {
   position: relative;
@@ -20,13 +21,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 427px;
+  font-size: 80px;
+  height: 390px;
   z-index: 2;
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
 .homeHeaderSubtitle {
   margin: 161px 0 0;
-  font-size: 38px;
+  font-size: 34px;
   text-align: center;
   letter-spacing: 0.5px;
 }
@@ -34,7 +37,7 @@
   margin: 0 100px 0;
 }
 .homeShopTitle {
-  font-size: 80px;
+  font-size: 70px;
   text-align: center;
   text-transform: uppercase;
   margin: 210px 0 115px;

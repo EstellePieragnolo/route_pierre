@@ -16,7 +16,7 @@ export default class Logo extends React.Component {
             data.logoes.map(logos => {
               return (
                 logos.logo &&
-                <img key={logos.id} src={logos.logo.url} alt="" height="427" />
+                <img key={logos.id} src={logos.logo.url} alt="" height="390" />
               )
             })
 
