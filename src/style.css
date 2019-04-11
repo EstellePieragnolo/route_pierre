@@ -20,7 +20,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 90px;
   height: 427px;
   z-index: 2;
   text-transform: uppercase;
@@ -31,13 +30,76 @@
   text-align: center;
   letter-spacing: 0.5px;
 }
+.homeShop {
+  margin: 0 100px 0;
+}
 .homeShopTitle {
   font-size: 80px;
   text-align: center;
   text-transform: uppercase;
-  margin: 85px 0 115px;
+  margin: 210px 0 115px;
+}
+.homeShopCategory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0 150px;
+}
+.homeShopCategoryItems {
+  position: relative;
+  margin: 0 40px;
+  width: 360px;
+  height: 360px;
+  cursor: pointer;
+}
+.homeShopCategoryItemsHover {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F5E77A;
+}
+.homeShopCategoryItemsHover p {
+  font-size: 35px;
+}
+.homeShopCategoryItems:hover > .homeShopCategoryItemsHover {
+  display: flex;
+}
+.homeShopInspiration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 155px 0;
+}
+.homeShopInspirationTitle {
+  text-align: center;
+  font-size: 45px;
+  margin: 0 0 55px;
+}
+.homeShopInspirationDescription {
+  font-size: 22px;
+  line-height: 33px;
+  max-width: 1240px;
+  margin: 0 auto;
+  text-align: center;
 }
 
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (min-device-height: 750px) {
+  .homeHeaderItemsTitle {
+    font-size: 90px;
+  }
+}
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-height: 750px) {
+  .homeHeaderItemsTitle {
+    font-size: 70px;
+  }
+}
 * {
   margin: 0;
 }

@@ -22,7 +22,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 90px;
+
                 height: 427px;
                 z-index: 2;
                 text-transform: uppercase;
@@ -101,6 +101,34 @@
                 margin: 0 auto;
                 text-align: center;
 
+            }
+        }
+    }
+}
+
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (min-device-height: 750px) {
+    .home {
+        &Header {
+            &Items {
+                &Title {
+                    font-size: 90px;
+                }
+            }
+        }
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-height: 750px) {
+    .home {
+        &Header {
+
+            &Items {
+                &Title {
+                    font-size: 70px;
+                }
             }
         }
     }
