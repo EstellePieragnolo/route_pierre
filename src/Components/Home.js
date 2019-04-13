@@ -14,7 +14,7 @@ export default class Home extends React.Component {
       <div className="home">
         <div className="homeHeader">
           <div className="homeHeaderItems">
-            <div className="homeHeaderItemsLogo"><Logo /></div>
+            <div className="homeHeaderItemsLogo"><Logo height={'390px'} /></div>
             <h1 className="homeHeaderItemsTitle">LA ROUTE DE LA PIERRE</h1>
           </div>
           <div className="homeHeaderSubtitle">

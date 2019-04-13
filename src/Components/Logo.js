@@ -17,7 +17,7 @@ export default class Logo extends React.Component {
               if (logos.title === 'mainLogo') {
                 return (
                   logos.logo &&
-                  <img key={logos.id} src={logos.logo.url} alt="" height="390" />
+                  <img key={logos.id} src={logos.logo.url} alt="" height={this.props.height} />
                 )
               } else return null;
             })

@@ -76,7 +76,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 0 155px 0;
+  margin: 0;
   padding: 137px 0;
   background-color: #F4E261;
 }
@@ -100,6 +100,7 @@
 h1,
 h2,
 h3,
+h4,
 p {
   color: #666666;
   font-weight: 400;
@@ -111,6 +112,7 @@ h3 {
 
 h1,
 h2,
+h4,
 p {
   font-family: "Raleway", sans-serif;
 }

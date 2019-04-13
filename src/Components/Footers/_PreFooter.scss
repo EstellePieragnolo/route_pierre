@@ -1,23 +1,44 @@
 @import '../../_variables.scss';
 
 .prefooter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    padding: 110px 70px;
 
-    &Item {
+    &Container {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        margin: 0 auto;
+        max-width: 1440px;
 
-        &Title {}
+        &Item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-        &Content {
-            &Social {}
+
+
+            &Title {
+                text-transform: uppercase;
+                margin: 0 0 18px 0;
+                font-size: 18px;
+            }
+
+            &Content {
+                font-size: 18px;
+                line-height: 24px;
+
+                &Social {
+                    margin: 0 10px;
+
+                    img {
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+
         }
-
-
     }
 }
