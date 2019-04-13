@@ -34,7 +34,7 @@
   letter-spacing: 0.5px;
 }
 .homeShop {
-  margin: 0 100px 0;
+  margin: 0;
 }
 .homeShopTitle {
   font-size: 70px;
@@ -77,6 +77,8 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 0 155px 0;
+  padding: 137px 0;
+  background-color: #F4E261;
 }
 .homeShopInspirationTitle {
   text-align: center;
@@ -91,18 +93,6 @@
   text-align: center;
 }
 
-/* ----------- Non-Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (min-device-height: 750px) and (-webkit-min-device-pixel-ratio: 1) {
-  .homeHeaderItemsTitle {
-    font-size: 90px;
-  }
-}
-/* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) {
-  .homeHeaderItemsTitle {
-    font-size: 70px;
-  }
-}
 * {
   margin: 0;
 }

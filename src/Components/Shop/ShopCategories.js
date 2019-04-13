@@ -6,6 +6,7 @@ export default class ShopCategories extends React.Component {
 
 
     render() {
+        console.log(this.data)
         return (
             <div className="homeShopCategory">
                 <Query query={items}>

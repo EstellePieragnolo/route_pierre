@@ -1,3 +1,5 @@
+@import '../_variables.scss';
+
 .home {
     &Header {
         display: flex;
@@ -39,7 +41,7 @@
     }
 
     &Shop {
-        margin: 0 100px 0;
+        margin: 0;
 
         &Title {
             font-size: 70px;
@@ -88,6 +90,8 @@
             flex-direction: column;
             justify-content: center;
             margin: 0 0 155px 0;
+            padding: 137px 0;
+            background-color: $yellow;
 
             &Title {
                 text-align: center;
@@ -102,34 +106,6 @@
                 margin: 0 auto;
                 text-align: center;
 
-            }
-        }
-    }
-}
-
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (min-device-height: 750px) and (-webkit-min-device-pixel-ratio: 1) {
-    .home {
-        &Header {
-            &Items {
-                &Title {
-                    font-size: 90px;
-                }
-            }
-        }
-    }
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) {
-    .home {
-        &Header {
-
-            &Items {
-                &Title {
-                    font-size: 70px;
-                }
             }
         }
     }

@@ -5,7 +5,7 @@ import { Query } from 'react-apollo';
 export default class Inspirations extends React.Component {
 
     render() {
-        return (<div className="homeShopInspiration">
+        return (
             <Query query={inspiration}>
                 {({ data, loading, error }) => {
                     if (loading) return 'Loading';
@@ -14,13 +14,15 @@ export default class Inspirations extends React.Component {
                         data.inspirations &&
                         data.inspirations.map(inspiration => {
                             return (
-                                <div>
+                                <div className="homeShopInspiration">
                                     <h3 className="homeShopInspirationTitle">
                                         {inspiration.title}
                                     </h3>
                                     <p className="homeShopInspirationDescription">
                                         {inspiration.description}
                                     </p>
+                                    <br /><br />
+                                    <p className="homeShopInspirationDescription">{inspiration.descriptionBis}</p>
                                 </div>
                             )
 
@@ -30,7 +32,7 @@ export default class Inspirations extends React.Component {
                 }}
             </Query>
 
-        </div>
+
         )
     }
 }
@@ -38,8 +40,9 @@ export default class Inspirations extends React.Component {
 export const inspiration = gql`
   query{
     inspirations {
-      id
-      description
+      id,
+      description,
+      descriptionBis,
       title
     }
   }
