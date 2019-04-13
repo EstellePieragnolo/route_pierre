@@ -93,15 +93,6 @@
   text-align: center;
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 70px;
-  background-color: #F4E261;
-}
-
 * {
   margin: 0;
 }

@@ -7,4 +7,9 @@
     justify-content: space-between;
     padding: 8px 70px;
     background-color: $yellow;
+
+    &Copyright,
+    &Author {
+        font-size: 14px;
+    }
 }

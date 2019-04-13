@@ -14,10 +14,12 @@ export default class Logo extends React.Component {
           return (
             data.logoes &&
             data.logoes.map(logos => {
-              return (
-                logos.logo &&
-                <img key={logos.id} src={logos.logo.url} alt="" height="390" />
-              )
+              if (logos.title === 'mainLogo') {
+                return (
+                  logos.logo &&
+                  <img key={logos.id} src={logos.logo.url} alt="" height="390" />
+                )
+              } else return null;
             })
 
           );
@@ -32,6 +34,7 @@ export const logo = gql`
   query {
     logoes {        
       id,
+      title,
       logo {
         url
       }
