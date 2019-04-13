@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './Logo';
 import Inspirations from './Inspirations';
 import ShopCategories from './Shop/ShopCategories';
+import Footer from './Footer/Footer';
 import './_Home.scss';
 
 export default class Home extends React.Component {
@@ -24,7 +25,7 @@ export default class Home extends React.Component {
           <ShopCategories />
 
           <Inspirations />
-
+          <Footer />
         </div>
       </div >
     )
