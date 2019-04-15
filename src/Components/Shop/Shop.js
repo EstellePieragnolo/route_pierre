@@ -1,47 +1,12 @@
 import React from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import ShopItem from './ShopItem';
 
 export default class Shop extends React.Component {
 
     render() {
         return (
-            <Query query={creas}>
-                {({ data, loading, error }) => {
-                    if (loading) return 'Loading';
-                    if (error) return <p>ERROR</p>;
-
-                    return (
-                        data.creations &&
-                        data.creations.map(crea => {
-                            return <div key={crea.id}>
-                                <p >{crea.id}</p>
-                                <p> {crea.name}</p>
-                                {
-                                    crea.picture &&
-                                    <img src={crea.picture.url} alt="" width="300" />
-                                }
-                            </div>
-                        })
-
-                    );
-                }}
-            </Query>
+            <ShopItem />
         );
 
     }
 }
-
-export const creas = gql`
-    query {
-        creations {
-            id,
-            name,
-            picture {
-            id,
-            url
-            }
-        }
-    }
-`
-
