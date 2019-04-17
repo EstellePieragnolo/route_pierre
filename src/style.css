@@ -93,31 +93,25 @@
   text-align: center;
 }
 
-.Shop {
-  margin: 0;
-}
-.ShopTitle {
-  font-size: 70px;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 210px 0 115px;
-}
-.ShopCategory {
+.shop {
+  margin: 90px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0 0 150px;
+  flex-wrap: wrap;
+  max-width: 1440px;
 }
-.ShopCategoryItems {
+.shopItem {
   position: relative;
-  margin: 0 40px;
+  margin: 40px;
   width: 360px;
   height: 360px;
   cursor: pointer;
 }
-.ShopCategoryItemsHover {
+.shopItemContainerInfo {
   position: absolute;
   display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   top: 0;
@@ -126,11 +120,35 @@
   height: 100%;
   background-color: #F5E77A;
 }
-.ShopCategoryItemsHover p {
-  font-size: 35px;
+.shopItemContainerInfoName {
+  font-size: 28px;
+  margin: 0 0 28px 0;
+  text-align: center;
+  font-family: "Arvo", serif !important;
 }
-.ShopCategoryItems:hover > .ShopCategoryItemsHover {
+.shopItemContainerInfoPrice {
+  font-size: 22px;
+  font-family: "Arvo", serif !important;
+}
+.shopItemContainer:hover > .shopItemContainerInfo {
   display: flex;
+}
+.shop i {
+  margin: 40px;
+  width: 360px !important;
+  height: 360px;
+}
+
+.shopContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shopContainerTitle {
+  text-transform: uppercase;
+  font-size: 80px;
+  text-align: center;
+  margin: 155px 0 0;
 }
 
 * {

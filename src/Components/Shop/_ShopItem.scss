@@ -1,45 +1,54 @@
-.shopItem {
-    margin: 0;
-
+.shop {
+    margin: 90px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 0 150px;
+    flex-wrap: wrap;
+    max-width: 1440px;
 
-    position: relative;
-    margin: 0 40px;
-    width: 360px;
-    height: 360px;
-    cursor: pointer;
+    &Item {
+        position: relative;
+        margin: 40px;
+        width: 360px;
+        height: 360px;
+        cursor: pointer;
 
-    &Container {
-        &Info {
-            position: absolute;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #F5E77A;
+        &Container {
+            &Info {
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #F5E77A;
 
 
-            &Name {
-                font-size: 28px;
-                margin: 0 0 28px 0;
-                font-family: 'Arvo', serif !important;
+                &Name {
+                    font-size: 28px;
+                    margin: 0 0 28px 0;
+                    text-align: center;
+                    font-family: 'Arvo', serif !important;
+                }
+
+                &Price {
+                    font-size: 22px;
+                    font-family: 'Arvo', serif !important;
+                }
             }
 
-            &Price {
-                font-size: 22px;
-                font-family: 'Arvo', serif !important;
+            &:hover>&Info {
+                display: flex;
             }
         }
+    }
 
-        &:hover>&Info {
-            display: flex;
-        }
+    i {
+        margin: 40px;
+        width: 360px !important;
+        height: 360px;
     }
 }
