@@ -34,7 +34,7 @@ export default class Shop extends React.Component {
                 <h2 className="shopContainerTitle">Le Magasin</h2>
 
                 <div className="shopContainerFilters">
-                    <ShopFilters filter={this.filters} />
+                    <ShopFilters filter={this.filters} selected={this.state.filter} />
                 </div>
 
                 <div className="shopContainerItems">

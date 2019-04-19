@@ -1,6 +1,8 @@
 import React from 'react';
 import gql from 'graphql-tag';
+import { Routes } from '../paths';
 import { Query } from 'react-apollo';
+import { Link } from 'react-router-dom';
 
 export default class ShopCategories extends React.Component {
 
@@ -17,18 +19,20 @@ export default class ShopCategories extends React.Component {
                             data.introShops &&
                             data.introShops.map(introShop => {
                                 return (
-                                    <div className="homeShopCategoryItems">
-                                        {
-                                            introShop.image &&
-                                            <div key={introShop.id} className="homeShopCategoryItemsImage">
-                                                <img src={introShop.image.url} alt="shopCategories" width="360" />
+                                    <Link to={Routes.SHOP}>
+                                        <div className="homeShopCategoryItems" onClick={this.props.shopCategory(introShop.shopCategory)}>
+                                            {
+                                                introShop.image &&
+                                                <div key={introShop.id} className="homeShopCategoryItemsImage">
+                                                    <img src={introShop.image.url} alt="shopCategories" width="360" />
+                                                </div>
+                                            }
+                                            <div className="homeShopCategoryItemsHover">
+                                                <p>{introShop.category}</p>
                                             </div>
-                                        }
-                                        <div className="homeShopCategoryItemsHover">
-                                            <p>{introShop.category}</p>
-                                        </div>
 
-                                    </div>
+                                        </div>
+                                    </Link>
                                 )
 
                             })
@@ -49,7 +53,8 @@ query {
     category,
     image {
       url
-    }
+    },
+    shopCategory
   }
 }
 `

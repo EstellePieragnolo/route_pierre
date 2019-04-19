@@ -157,7 +157,7 @@
   justify-content: center;
   margin: 105px 0 0;
 }
-.filtersContainerItem {
+.filtersContainerItemUnselected, .filtersContainerItemSelected {
   margin: 0 50px;
   width: 224px;
   height: 55px;
@@ -172,8 +172,11 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.filtersContainerItem:hover {
-  color: #F4E261;
+.filtersContainerItemUnselected:hover, .filtersContainerItemSelected:hover {
+  background-color: #F4E261;
+}
+.filtersContainerItemSelected {
+  background-color: #F4E261;
 }
 
 * {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Routes } from './paths';
 import Header from './Header';
 import Home from './Home';
 import Shop from './Shop/Shop';
@@ -14,8 +15,8 @@ export default class App extends React.Component {
                <div>
                   {/* <Header /> */}
                   <main>
-                     <Route exact path='/' component={Home} />
-                     <Route exact path='/Shop/' component={Shop} />
+                     <Route exact={true} path={Routes.ROOT} component={Home} />
+                     <Route exact={true} path={Routes.SHOP} component={Shop} />
                   </main>
                </div>
             </Router>

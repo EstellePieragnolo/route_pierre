@@ -8,6 +8,27 @@ import './_Home.scss';
 
 
 export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      shopCategory: ''
+    }
+  }
+
+  shopCategory = (category) => () => {
+    if (this.state.shopCategory !== category) {
+      this.setState({
+        shopCategory: category
+      })
+      return this.state.shopCategory
+
+    } else if (this.state.shopCategory === category) {
+      this.setState({
+        shopCategory: ''
+      })
+      return this.state.shopCategory
+    }
+  }
 
   render() {
     return (
@@ -24,7 +45,7 @@ export default class Home extends React.Component {
         </div>
         <div className="homeShop">
           <h2 className="homeShopTitle">Le magasin</h2>
-          <ShopCategories />
+          <ShopCategories shopCategory={this.shopCategory} />
           <Inspirations />
           <PreFooter />
           <Footer />
