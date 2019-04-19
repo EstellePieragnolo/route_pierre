@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import ShopItem from './ShopItem';
 import './_Shop.scss';
+import ShopFilters from './ShopFilters';
 
 export default class Shop extends React.Component {
 
@@ -11,7 +12,12 @@ export default class Shop extends React.Component {
             <div className="shopContainer">
                 <h2 className="shopContainerTitle">Le Magasin</h2>
 
+                <div className="shopContainerFilters">
+                    <ShopFilters />
+                </div>
+
                 <div className="shopContainerItems">
+
                     <Query query={items}>
                         {({ data, loading, error }) => {
                             if (loading) return 'Loading';
@@ -32,6 +38,7 @@ export default class Shop extends React.Component {
                             );
                         }}
                     </Query>
+
                     <i aria="hidden" />
                     <i aria="hidden" />
                 </div>
