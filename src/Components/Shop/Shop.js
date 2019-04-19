@@ -6,6 +6,27 @@ import './_Shop.scss';
 import ShopFilters from './ShopFilters';
 
 export default class Shop extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            filter: ''
+        }
+    }
+
+    filters = (category) => () => {
+        if (this.state.filter !== category) {
+            this.setState({
+                filter: category
+            })
+            return this.state.filter
+
+        } else if (this.state.filter === category) {
+            this.setState({
+                filter: ''
+            })
+            return this.state.filter
+        }
+    }
 
     render() {
         return (
@@ -13,7 +34,7 @@ export default class Shop extends React.Component {
                 <h2 className="shopContainerTitle">Le Magasin</h2>
 
                 <div className="shopContainerFilters">
-                    <ShopFilters />
+                    <ShopFilters filter={this.filters} />
                 </div>
 
                 <div className="shopContainerItems">
@@ -25,13 +46,24 @@ export default class Shop extends React.Component {
                             return (
                                 data.creations &&
                                 data.creations.map(creation => {
-                                    return (
-                                        creation.picture &&
-                                        <ShopItem image={creation.picture.url}
-                                            name={creation.name}
-                                            price={creation.price}
-                                        />
-                                    )
+                                    if (this.state.filter === '') {
+                                        return (
+                                            creation.picture &&
+                                            <ShopItem image={creation.picture.url}
+                                                name={creation.name}
+                                                price={creation.price}
+                                            />
+                                        )
+                                    }
+                                    else if (this.state.filter === creation.category) {
+                                        return (
+                                            creation.picture &&
+                                            <ShopItem image={creation.picture.url}
+                                                name={creation.name}
+                                                price={creation.price}
+                                            />
+                                        )
+                                    }
 
                                 })
 
@@ -56,7 +88,8 @@ export const items = gql`
             picture {
                 url
             },
-            price
+            price,
+            category
         }
     }
 `
