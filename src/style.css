@@ -93,14 +93,6 @@
   text-align: center;
 }
 
-.shop {
-  margin: 90px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1440px;
-}
 .shopItem {
   position: relative;
   margin: 40px;
@@ -108,7 +100,7 @@
   height: 360px;
   cursor: pointer;
 }
-.shopItemContainerInfo {
+.shopItemInfo {
   position: absolute;
   display: none;
   flex-direction: column;
@@ -120,35 +112,44 @@
   height: 100%;
   background-color: #F5E77A;
 }
-.shopItemContainerInfoName {
+.shopItemInfoName {
   font-size: 28px;
   margin: 0 0 28px 0;
   text-align: center;
   font-family: "Arvo", serif !important;
 }
-.shopItemContainerInfoPrice {
+.shopItemInfoPrice {
   font-size: 22px;
   font-family: "Arvo", serif !important;
 }
-.shopItemContainer:hover > .shopItemContainerInfo {
+.shopItem:hover > .shopItemInfo {
   display: flex;
-}
-.shop i {
-  margin: 40px;
-  width: 360px !important;
-  height: 360px;
 }
 
 .shopContainer {
+  margin: 90px auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
 }
 .shopContainerTitle {
   text-transform: uppercase;
   font-size: 80px;
   text-align: center;
   margin: 155px 0 0;
+}
+.shopContainerItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shopContainer i {
+  margin: 40px;
+  width: 360px !important;
+  height: 360px;
 }
 
 * {
