@@ -2,12 +2,14 @@
 
 .home {
     &Header {
+        margin: -80px 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         height: 100vh;
         padding: 0 100px;
+        z-index: 1;
 
         &Items {
             position: relative;
