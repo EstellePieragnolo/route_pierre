@@ -5,6 +5,7 @@ import ShopCategories from './Shop/ShopCategories';
 import Footer from './Footers/Footer';
 import PreFooter from './Footers/PreFooter';
 import './_Home.scss';
+import Menu from './Menu';
 
 
 export default class Home extends React.Component {
@@ -33,6 +34,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="home">
+        <Menu />
         <div className="homeHeader">
           <div className="homeHeaderItems">
             <div className="homeHeaderItemsLogo"><Logo height={'390px'} /></div>

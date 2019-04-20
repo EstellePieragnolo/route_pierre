@@ -2,8 +2,9 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import ShopItem from './ShopItem';
-import './_Shop.scss';
 import ShopFilters from './ShopFilters';
+import Loader from '../Loader/Loader';
+import './_Shop.scss';
 
 export default class Shop extends React.Component {
     constructor(props) {
@@ -41,7 +42,7 @@ export default class Shop extends React.Component {
 
                     <Query query={items}>
                         {({ data, loading, error }) => {
-                            if (loading) return 'Loading';
+                            if (loading) return <Loader />;
                             if (error) return <p>ERROR</p>;
                             return (
                                 data.creations &&

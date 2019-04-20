@@ -3,17 +3,17 @@ import gql from 'graphql-tag';
 import { Routes } from '../paths';
 import { Query } from 'react-apollo';
 import { Link } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 
 export default class ShopCategories extends React.Component {
 
 
     render() {
-        console.log(this.data)
         return (
             <div className="homeShopCategory">
                 <Query query={items}>
                     {({ data, loading, error }) => {
-                        if (loading) return 'Loading';
+                        if (loading) return <Loader />;
                         if (error) return <p>ERROR</p>;
                         return (
                             data.introShops &&
