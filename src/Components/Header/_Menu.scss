@@ -12,14 +12,11 @@
     height: 100vh;
     background-color: $yellow;
     z-index: 10;
+    margin: 0 0 0 -84px;
 
     &Close {
         position: relative;
         cursor: pointer;
-
-        &:hover {
-            opacity: 0.7;
-        }
 
         &:before {
             content: '';

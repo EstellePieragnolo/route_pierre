@@ -1,11 +1,14 @@
 @import '../../_variables.scss';
 
 .navbar {
-    z-index: 1000;
+    position: fixed;
+    top: 70px;
+    left: 84px;
+    z-index: 10;
 
     &Hamburger {
         width: 35px;
-        margin: 60px 0 0 85px;
+        margin: 0;
         cursor: pointer;
 
         &:hover>span {

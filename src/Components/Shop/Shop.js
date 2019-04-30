@@ -5,6 +5,7 @@ import ShopItem from './ShopItem';
 import ShopFilters from './ShopFilters';
 import Loader from '../Loader/Loader';
 import './_Shop.scss';
+import Header from '../Header/Header';
 
 export default class Shop extends React.Component {
     constructor(props) {
@@ -32,6 +33,7 @@ export default class Shop extends React.Component {
     render() {
         return (
             <div className="shopContainer">
+                <Header />
                 <h2 className="shopContainerTitle">Le Magasin</h2>
 
                 <div className="shopContainerFilters">
