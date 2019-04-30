@@ -20,7 +20,7 @@ export default class ShopCategories extends React.Component {
                             data.introShops.map(introShop => {
                                 return (
                                     <Link to={Routes.SHOP}>
-                                        <div className="homeShopCategoryItems" onClick={this.props.shopCategory(introShop.shopCategory)}>
+                                        <div className="homeShopCategoryItems">
                                             {
                                                 introShop.image &&
                                                 <div key={introShop.id} className="homeShopCategoryItemsImage">

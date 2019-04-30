@@ -1,7 +1,9 @@
 @import '../_variables.scss';
 
 .home {
+
     &Header {
+        pointer-events: none;
         margin: -80px 0 0;
         display: flex;
         justify-content: center;

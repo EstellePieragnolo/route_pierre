@@ -8,34 +8,33 @@ import './_Home.scss';
 import Menu from './Header/Menu';
 import Header from './Header/Header';
 
+// const documentScrollTop = () => {
+//   return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+// };
 
 export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      shopCategory: ''
-    }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScroll);
   }
 
-  shopCategory = (category) => () => {
-    if (this.state.shopCategory !== category) {
-      this.setState({
-        shopCategory: category
-      })
-      return this.state.shopCategory
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
 
-    } else if (this.state.shopCategory === category) {
-      this.setState({
-        shopCategory: ''
-      })
-      return this.state.shopCategory
-    }
+  onScroll = () => {
+    console.log(window.pageYOffset)
   }
 
   render() {
+
     return (
       <div className="home">
-        <Header />
+        <div className={"homeNavbar" + (
+          document.documentElement.scrollTop > window.innerHeight - 40 ? 'top' : 'down'
+        )}>
+          <Header />
+        </div>
         <div className="homeHeader">
           <div className="homeHeaderItems">
             <div className="homeHeaderItemsLogo"><Logo height={'390px'} /></div>
