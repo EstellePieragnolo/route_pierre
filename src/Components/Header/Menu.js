@@ -11,20 +11,23 @@ export default class Menu extends React.Component {
             )}>
                 <div className="menuOpenClose"></div>
                 <div className="menuOpenContainer">
-                    <h2>Menu</h2>
+                    <h2 className="menuOpenContainerTitle">Menu</h2>
 
                     <div className="menuOpenContainerItems">
                         <p className="menuOpenContainerItemsCategory">
                             <Link to={Routes.ROOT}>
-                                Home
+                                Accueil
         </Link>
                         </p>
 
                         <p className="menuOpenContainerItemsCategory">
                             <Link to={Routes.SHOP}>
-                                Shop
+                                Le magasin
         </Link>
                         </p>
+                        <p className="menuOpenContainerItemsCategory">Inspiration et démarche</p>
+                        <p className="menuOpenContainerItemsCategory">Qui sommes-nous</p>
+                        <p className="menuOpenContainerItemsCategory">Contact</p>
                     </div>
                 </div>
             </div>

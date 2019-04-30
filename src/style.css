@@ -81,7 +81,7 @@
   justify-content: center;
   margin: 0;
   padding: 137px 0;
-  background-color: #F4E261;
+  background-color: #F5E77A;
 }
 .homeShopInspirationTitle {
   text-align: center;
@@ -175,10 +175,10 @@
   cursor: pointer;
 }
 .filtersContainerItemUnselected:hover, .filtersContainerItemSelected:hover {
-  background-color: #F4E261;
+  background-color: #F5E77A;
 }
 .filtersContainerItemSelected {
-  background-color: #F4E261;
+  background-color: #F5E77A;
 }
 
 .loader {
@@ -212,7 +212,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #F4E261;
+  background-color: #F5E77A;
   z-index: 10;
 }
 .menuOpenClose {
@@ -222,10 +222,10 @@
   content: "";
   display: inline-block;
   position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 1px;
-  height: 30px;
+  top: 60px;
+  left: 100px;
+  width: 2px;
+  height: 50px;
   background-color: #666;
   transform: rotate(45deg);
 }
@@ -233,10 +233,10 @@
   content: "";
   display: inline-block;
   position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 1px;
-  height: 30px;
+  top: 60px;
+  left: 100px;
+  width: 2px;
+  height: 50px;
   background-color: #666;
   transform: rotate(-45deg);
 }
@@ -248,11 +248,23 @@
   justify-content: center;
   align-items: center;
 }
+.menuOpenContainerTitle {
+  font-size: 80px;
+}
 .menuOpenContainerItems {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 50px;
+  text-decoration: none;
+}
+.menuOpenContainerItems a {
+  text-decoration: none;
+  color: #666;
+}
+.menuOpenContainerItems a:focus, .menuOpenContainerItems a:visited {
+  text-decoration: none;
 }
 
 * {
