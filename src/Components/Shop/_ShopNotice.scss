@@ -2,7 +2,6 @@
 
 .notice {
     margin: 95px 0 0;
-    scroll-behavior: smooth;
 
     &Title {
         text-align: center;
@@ -23,8 +22,8 @@
         &Pictures {
             position: sticky;
             top: calc((100vh - 630px) / 2);
-            max-width: 630px;
-            max-height: 630px;
+            width: 630px;
+            height: 630px;
             margin: 0 25px 0;
 
             img {
@@ -35,7 +34,7 @@
         &Info {
             display: flex;
             flex-direction: column;
-            margin: 0 0 70px 25px;
+            margin: 0 0 66px 25px;
             padding: 30px;
             border: 1px solid $grey;
 
