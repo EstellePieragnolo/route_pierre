@@ -52,7 +52,9 @@ export default class Shop extends React.Component {
                                     if (this.state.filter === '') {
                                         return (
                                             creation.picture &&
-                                            <ShopItem image={creation.picture.url}
+                                            <ShopItem
+                                                id={creation.id}
+                                                image={creation.picture.url}
                                                 name={creation.name}
                                                 price={creation.price}
                                             />
@@ -61,7 +63,9 @@ export default class Shop extends React.Component {
                                     else if (this.state.filter === creation.category) {
                                         return (
                                             creation.picture &&
-                                            <ShopItem image={creation.picture.url}
+                                            <ShopItem
+                                                id={creation.id}
+                                                image={creation.picture.url}
                                                 name={creation.name}
                                                 price={creation.price}
                                             />
@@ -74,8 +78,8 @@ export default class Shop extends React.Component {
                         }}
                     </Query>
 
-                    <i aria="hidden" />
-                    <i aria="hidden" />
+                    <i aria-hidden="true" />
+                    <i aria-hidden="true" />
                 </div>
 
             </div>
@@ -87,6 +91,7 @@ export default class Shop extends React.Component {
 export const items = gql`
     query {
         creations {
+            id,
             name,
             picture {
                 url

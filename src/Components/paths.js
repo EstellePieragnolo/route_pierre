@@ -1,5 +1,5 @@
 export const Routes = {
     ROOT: '/',
     SHOP: '/shop',
-    NOTICE: '/shop/notice'
+    NOTICE: '/shop/notice/:id'
 }
