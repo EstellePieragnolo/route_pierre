@@ -22,6 +22,59 @@ export default class ShopNotice extends React.Component {
                                     return (
                                         <div>
                                             <h2>{creation.name}</h2>
+                                            <div>
+                                                <img src={creation.picture.url} alt="" />
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <h3>Description</h3>
+                                                    <p>{creation.description.text}</p>
+                                                </div>
+                                                <div>
+                                                    <h3>Fiche technique</h3>
+                                                    {
+                                                        creation.stone &&
+                                                        <p>
+                                                            - Nature de pierre: {creation.stone}
+                                                        </p>
+                                                    }
+                                                    {
+                                                        creation.origin &&
+                                                        <p>
+                                                            - Provenance: {creation.origin}
+                                                        </p>
+                                                    }
+                                                    {
+                                                        creation.steel &&
+                                                        <p>
+                                                            - Acier de l'émouture: {creation.steel}
+                                                        </p>
+                                                    }
+                                                    {
+                                                        creation.dimension &&
+                                                        <p>
+                                                            - Dimension: {creation.dimension}
+                                                        </p>
+                                                    }
+                                                    {
+                                                        creation.finish &&
+                                                        <p>
+                                                            - Finitions: {creation.finish}
+                                                        </p>
+                                                    }
+                                                    {
+                                                        creation.maintain &&
+                                                        <p>
+                                                            - Entretien: {creation.maintain}
+                                                        </p>
+                                                    }
+                                                    {
+                                                        creation.price &&
+                                                        <h2>Prix: {creation.price}€</h2>
+                                                    }
+
+                                                </div>
+                                            </div>
                                         </div>
                                     )
                                 } else return null
@@ -50,6 +103,7 @@ export const notice = gql`
                 text
             },
             stone,
+            origin,
             steel,
             maintain,
             dimension,
