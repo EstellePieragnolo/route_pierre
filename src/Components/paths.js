@@ -1,4 +1,5 @@
 export const Routes = {
     ROOT: '/',
-    SHOP: '/shop'
+    SHOP: '/shop',
+    NOTICE: '/shop/notice'
 }

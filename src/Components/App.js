@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Routes } from './paths';
 import Home from './Home';
 import Shop from './Shop/Shop';
-import Header from './Header/Header';
+import ShopNotice from './Shop/ShopNotice';
 
 export default class App extends React.Component {
 
@@ -13,11 +13,9 @@ export default class App extends React.Component {
          <div className="App">
             <Router>
                <div>
-
-
                   <Route exact={true} path={Routes.ROOT} component={Home} />
                   <Route exact={true} path={Routes.SHOP} component={Shop} />
-
+                  <Route exact={true} path={Routes.NOTICE} component={ShopNotice} />
                </div>
             </Router>
          </div>

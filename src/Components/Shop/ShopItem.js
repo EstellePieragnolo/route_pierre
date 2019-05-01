@@ -1,19 +1,23 @@
 import React from 'react';
+import { Routes } from '../paths';
+import { Link } from 'react-router-dom';
 import './_ShopItem.scss';
 
 export default class ShopItem extends React.Component {
 
     render() {
         return (
-            <div className="shopItem">
-                <div className="shopItemImage">
-                    <img src={this.props.image} alt="shopCategories" width="360" />
+            <Link to={Routes.NOTICE} target='_blank'>
+                <div className="shopItem">
+                    <div className="shopItemImage">
+                        <img src={this.props.image} alt="shopCategories" width="360" />
+                    </div>
+                    <div className="shopItemInfo">
+                        <p className="shopItemInfoName">{this.props.name}</p>
+                        <p className="shopItemInfoPrice">Prix: {this.props.price} €</p>
+                    </div>
                 </div>
-                <div className="shopItemInfo">
-                    <p className="shopItemInfoName">{this.props.name}</p>
-                    <p className="shopItemInfoPrice">Prix: {this.props.price} €</p>
-                </div>
-            </div>
+            </Link>
         );
 
     }
