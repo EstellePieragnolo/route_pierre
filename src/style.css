@@ -363,7 +363,7 @@ p {
 }
 
 body::-webkit-scrollbar {
-  width: 1em;
+  width: 0.8em;
 }
 
 body::-webkit-scrollbar-track {
