@@ -2,6 +2,7 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import Loader from '../Loader/Loader';
+import Header from '../Header/Header';
 
 export default class ShopNotice extends React.Component {
 
@@ -11,6 +12,7 @@ export default class ShopNotice extends React.Component {
         console.log(this.props.match.params)
         return (
             <div>
+                <Header />
                 <Query query={notice}>
                     {({ data, loading, error }) => {
                         if (loading) return <Loader />;
@@ -20,59 +22,63 @@ export default class ShopNotice extends React.Component {
                             data.creations.map(creation => {
                                 if (id === creation.id) {
                                     return (
-                                        <div>
-                                            <h2>{creation.name}</h2>
-                                            <div>
-                                                <img src={creation.picture.url} alt="" />
-                                            </div>
-                                            <div>
-                                                <div>
-                                                    <h3>Description</h3>
-                                                    <p>{creation.description.text}</p>
+                                        <div className='notice'>
+                                            <h1 className='noticeTitle'>{creation.name}</h1>
+                                            <div className='noticeContainer'>
+                                                <div className='noticeContainerPictures'>
+                                                    <img src={creation.picture.url} alt="" />
                                                 </div>
-                                                <div>
-                                                    <h3>Fiche technique</h3>
-                                                    {
-                                                        creation.stone &&
-                                                        <p>
-                                                            - Nature de pierre: {creation.stone}
-                                                        </p>
-                                                    }
-                                                    {
-                                                        creation.origin &&
-                                                        <p>
-                                                            - Provenance: {creation.origin}
-                                                        </p>
-                                                    }
-                                                    {
-                                                        creation.steel &&
-                                                        <p>
-                                                            - Acier de l'émouture: {creation.steel}
-                                                        </p>
-                                                    }
-                                                    {
-                                                        creation.dimension &&
-                                                        <p>
-                                                            - Dimension: {creation.dimension}
-                                                        </p>
-                                                    }
-                                                    {
-                                                        creation.finish &&
-                                                        <p>
-                                                            - Finitions: {creation.finish}
-                                                        </p>
-                                                    }
-                                                    {
-                                                        creation.maintain &&
-                                                        <p>
-                                                            - Entretien: {creation.maintain}
-                                                        </p>
-                                                    }
-                                                    {
-                                                        creation.price &&
-                                                        <h2>Prix: {creation.price}€</h2>
-                                                    }
+                                                <div className='noticeContainerInfo'>
+                                                    <div className='noticeContainerInfoHeader'>
+                                                        <h3 className='noticeContainerInfoHeaderTitle'>Description</h3>
+                                                        <p className='noticeContainerInfoHeaderText'>{creation.description.text}</p>
+                                                    </div>
+                                                    <span className='noticeContainerInfoSeparator'></span>
+                                                    <div className='noticeContainerInfoList'>
+                                                        <h3 className='noticeContainerInfoListTitle'>Fiche technique</h3>
+                                                        {
+                                                            creation.stone &&
+                                                            <p className='noticeContainerInfoListItem'>
+                                                                - Nature de pierre: {creation.stone}
+                                                            </p>
+                                                        }
+                                                        {
+                                                            creation.origin &&
+                                                            <p className='noticeContainerInfoListItem'>
+                                                                - Provenance: {creation.origin}
+                                                            </p>
+                                                        }
+                                                        {
+                                                            creation.steel &&
+                                                            <p className='noticeContainerInfoListItem'>
+                                                                - Acier de l'émouture: {creation.steel}
+                                                            </p>
+                                                        }
+                                                        {
+                                                            creation.dimension &&
+                                                            <p className='noticeContainerInfoListItem'>
+                                                                - Dimension: {creation.dimension}
+                                                            </p>
+                                                        }
+                                                        {
+                                                            creation.finish &&
+                                                            <p className='noticeContainerInfoListItem'>
+                                                                - Finitions: {creation.finish}
+                                                            </p>
+                                                        }
+                                                        {
+                                                            creation.maintain &&
+                                                            <p className='noticeContainerInfoListItem'>
+                                                                - Entretien: {creation.maintain}
+                                                            </p>
+                                                        }
+                                                        <span className='noticeContainerInfoSeparator'></span>
+                                                        {
+                                                            creation.price &&
+                                                            <h3 className='noticeContainerInfoFooter'>Prix: {creation.price}€</h3>
+                                                        }
 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

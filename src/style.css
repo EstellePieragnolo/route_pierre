@@ -181,6 +181,68 @@
   background-color: #F5E77A;
 }
 
+.notice {
+  margin: 95px 0 0;
+}
+.noticeTitle {
+  text-align: center;
+  font-size: 50px;
+  padding: 0 0 30px;
+  background-color: white;
+  position: sticky;
+  top: 95px;
+}
+.noticeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1240px;
+  margin: auto;
+}
+.noticeContainerPictures {
+  position: sticky;
+  top: 230px;
+  width: 630px;
+  height: 630px;
+  margin: 0 25px 0;
+}
+.noticeContainerPictures img {
+  width: 630px;
+}
+.noticeContainerInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 95px 25px;
+  padding: 30px;
+  border: 1px solid #666;
+}
+.noticeContainerInfoSeparator {
+  content: "";
+  display: block;
+  width: 43px;
+  height: 8px;
+  background-color: #F5E77A;
+  border-radius: 10px;
+  margin: 30px auto;
+}
+.noticeContainerInfoHeader, .noticeContainerInfoList {
+  text-align: center;
+}
+.noticeContainerInfoHeaderTitle, .noticeContainerInfoListTitle {
+  font-size: 35px;
+  margin: 0 0 30px;
+}
+.noticeContainerInfoHeaderText, .noticeContainerInfoHeaderItem, .noticeContainerInfoListText, .noticeContainerInfoListItem {
+  font-size: 22px;
+  line-height: 33px;
+}
+.noticeContainerInfoListItem {
+  text-align: left;
+}
+.noticeContainerInfoFooter {
+  font-size: 35px;
+}
+
 .loader {
   width: 100%;
   display: flex;
@@ -214,9 +276,11 @@
   height: 100vh;
   background-color: #F5E77A;
   z-index: 10;
+  margin: 0 0 0 -84px;
 }
 .menuOpenClose {
   position: relative;
+  cursor: pointer;
 }
 .menuOpenClose:before {
   content: "";
@@ -250,21 +314,22 @@
 }
 .menuOpenContainerTitle {
   font-size: 80px;
+  margin-bottom: 75px;
 }
 .menuOpenContainerItems {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.menuOpenContainerItemsCategory {
   font-size: 50px;
   text-decoration: none;
+  margin-bottom: 45px;
+  cursor: pointer;
 }
-.menuOpenContainerItems a {
-  text-decoration: none;
-  color: #666;
-}
-.menuOpenContainerItems a:focus, .menuOpenContainerItems a:visited {
-  text-decoration: none;
+.menuOpenContainerItemsCategory:hover, .menuOpenContainerItemsCategory:hover > a {
+  color: white;
 }
 
 * {
