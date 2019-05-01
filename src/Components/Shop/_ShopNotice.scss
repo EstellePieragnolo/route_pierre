@@ -2,14 +2,15 @@
 
 .notice {
     margin: 95px 0 0;
+    scroll-behavior: smooth;
 
     &Title {
         text-align: center;
         font-size: 50px;
-        padding: 0 0 30px;
+        padding: 0 0 75px;
         background-color: white;
         position: sticky;
-        top: 95px;
+        top: -60px;
     }
 
     &Container {
@@ -21,9 +22,9 @@
 
         &Pictures {
             position: sticky;
-            top: 230px;
-            width: 630px;
-            height: 630px;
+            top: calc((100vh - 630px) / 2);
+            max-width: 630px;
+            max-height: 630px;
             margin: 0 25px 0;
 
             img {
@@ -34,9 +35,9 @@
         &Info {
             display: flex;
             flex-direction: column;
-            margin: 45px 0 95px 25px;
+            margin: 0 0 70px 25px;
             padding: 30px;
-            dfsfs border: 1px solid $grey;
+            border: 1px solid $grey;
 
             &Separator {
                 content: '';

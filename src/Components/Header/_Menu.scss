@@ -69,9 +69,15 @@
                 margin-bottom: 45px;
                 cursor: pointer;
 
+                a {
+                    text-decoration: none;
+                    color: $grey;
+                }
+
                 &:hover,
                 &:hover>a {
                     color: white;
+                    text-decoration: none;
                 }
             }
         }
