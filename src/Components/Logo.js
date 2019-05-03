@@ -6,25 +6,31 @@ export default class Logo extends React.Component {
 
   render() {
     return (
-      <Query query={logo}>
-        {({ data, loading, error }) => {
-          if (loading) return null;
-          if (error) return <p>ERROR</p>;
+      <div>
+        {
+          logo ?
+            <Query query={logo}>
+              {({ data, loading, error }) => {
+                if (loading) return null;
+                if (error) return <p>ERROR</p>;
 
-          return (
-            data.logoes &&
-            data.logoes.map(logos => {
-              if (logos.title === 'mainLogo') {
                 return (
-                  logos.logo &&
-                  <img key={logos.id} src={logos.logo.url} alt="logo" height={this.props.height} />
-                )
-              } else return null;
-            })
+                  data.logoes &&
+                  data.logoes.map(logos => {
+                    if (logos.title === 'mainLogo') {
+                      return (
+                        logos.logo &&
+                        <img key={logos.id} src={logos.logo.url} alt="logo" height={this.props.height} />
+                      )
+                    } else return null;
+                  })
 
-          );
-        }}
-      </Query>
+                );
+              }}
+            </Query> :
+            null
+        }
+      </div>
 
     )
   }

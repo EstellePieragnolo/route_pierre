@@ -34,6 +34,7 @@ export default class PreFooter extends React.Component {
                             <Social
                                 direction="row"
                                 justify="center"
+                                width={24}
                             />
                         </div>
 

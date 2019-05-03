@@ -1,16 +1,16 @@
 @import '../../_variables.scss';
 
 .contact {
-    min-height: calc(100vh - 35px);
+    min-height: calc(100vh - 335px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 150px 0;
 
     &Title {
         font-size: 80px;
         text-align: center;
-        margin: 0 0 130px;
+        margin: 0 0 80px;
     }
 
     &Container {
@@ -20,7 +20,7 @@
         align-items: flex-start;
         width: 100%;
         max-width: 1240px;
-        margin: 0 auto;
+        margin: auto;
 
         &Item {
             text-align: center;

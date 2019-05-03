@@ -2,10 +2,8 @@ import React from 'react';
 import Logo from './Logo';
 import Inspirations from './Inspirations';
 import ShopCategories from './Shop/ShopCategories';
-import Footer from './Footers/Footer';
 import PreFooter from './Footers/PreFooter';
 import './_Home.scss';
-import Menu from './Header/Menu';
 import Header from './Header/Header';
 
 // const documentScrollTop = () => {
@@ -50,7 +48,6 @@ export default class Home extends React.Component {
           <ShopCategories shopCategory={this.shopCategory} />
           <Inspirations />
           <PreFooter />
-          <Footer />
         </div>
       </div >
     )
