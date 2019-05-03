@@ -5,6 +5,7 @@ import Home from './Home';
 import Shop from './Shop/Shop';
 import ShopNotice from './Shop/ShopNotice';
 import Contact from './Contact/Contact';
+import Footer from './Footers/Footer';
 
 export default class App extends React.Component {
 
@@ -22,6 +23,7 @@ export default class App extends React.Component {
                   </Switch>
                </div>
             </Router>
+            <Footer />
          </div>
       );
    }

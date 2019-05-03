@@ -337,6 +337,14 @@
   text-decoration: none;
 }
 
+.contactTitle {
+  font-size: 80px;
+  text-align: center;
+}
+.contactItemTitle {
+  font-size: 36px;
+}
+
 * {
   margin: 0;
   scroll-behavior: smooth;

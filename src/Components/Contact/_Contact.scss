@@ -1,0 +1,54 @@
+@import '../../_variables.scss';
+
+.contact {
+    min-height: calc(100vh - 35px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &Title {
+        font-size: 80px;
+        text-align: center;
+        margin: 0 0 130px;
+    }
+
+    &Container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+
+        &Item {
+            text-align: center;
+
+            &Title {
+                font-size: 36px;
+                margin: 0 0 50px;
+            }
+
+            &Info {
+                text-align: center;
+
+                p {
+                    margin: 30px 0 0;
+                    font-size: 24px;
+                }
+
+                &Email {
+                    width: 25px;
+                    transform: rotate(25deg);
+                    margin: 0 15px 0 0;
+                }
+
+                &Phone {
+                    width: 24px;
+                    margin: 0 15px 0 0;
+                }
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@ export default class Loader extends React.Component {
 
     render() {
         return (
-            <div className='social'>
+            <div className='social' style={{ flexDirection: this.props.direction, justifyContent: this.props.justify }}>
                 <Query query={logo}>
                     {({ data, loading }) => {
                         if (loading) return null;
@@ -18,16 +18,29 @@ export default class Loader extends React.Component {
                                 if (logos.title === 'instaLogo') {
                                     return (
                                         logos.logo &&
-                                        <a className="socialItem" key={logos.id} href="https://www.instagram.com/laroutedelapierre/" target="_blank" rel="noopener noreferrer">
-                                            <img src={logos.logo.url} className="socialItemFacebook" alt={logos.title} width={24} />
+                                        <a
+                                            className="socialItem"
+                                            key={logos.id} href="https://www.instagram.com/laroutedelapierre/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{ margin: this.props.margin }}
+                                        >
+                                            <img src={logos.logo.url} className="socialItemFacebook" alt={logos.title} width={this.props.width} />
                                         </a>
                                     )
                                 }
                                 else if (logos.title === 'facebookLogo') {
                                     return (
                                         logos.logo &&
-                                        <a className="socialItem" key={logos.id} href="https://www.facebook.com/La-Route-de-la-Pierre-587625451679647/" target="_blank" rel="noopener noreferrer">
-                                            <img src={logos.logo.url} className="socialItemInstagram" alt={logos.title} width={24} />
+                                        <a
+                                            className="socialItem"
+                                            key={logos.id}
+                                            href="https://www.facebook.com/La-Route-de-la-Pierre-587625451679647/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{ margin: this.props.margin }}
+                                        >
+                                            <img src={logos.logo.url} className="socialItemInstagram" alt={logos.title} width={this.props.width} />
                                         </a>
                                     )
                                 }

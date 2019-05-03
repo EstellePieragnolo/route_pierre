@@ -31,7 +31,10 @@ export default class PreFooter extends React.Component {
                         <h4 className="prefooterContainerItemTitle">Nous suivre</h4>
 
                         <div className="prefooterContainerItemContent">
-                            <Social />
+                            <Social
+                                direction="row"
+                                justify="center"
+                            />
                         </div>
 
 
