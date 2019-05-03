@@ -17,17 +17,21 @@ export default class Menu extends React.Component {
                         <p className="menuOpenContainerItemsCategory">
                             <Link to={Routes.ROOT}>
                                 Accueil
-        </Link>
+                            </Link>
                         </p>
 
                         <p className="menuOpenContainerItemsCategory">
                             <Link to={Routes.SHOP}>
                                 Le magasin
-        </Link>
+                            </Link>
                         </p>
                         <p className="menuOpenContainerItemsCategory">Inspiration et démarche</p>
                         <p className="menuOpenContainerItemsCategory">Qui sommes-nous</p>
-                        <p className="menuOpenContainerItemsCategory">Contact</p>
+                        <p className="menuOpenContainerItemsCategory">
+                            <Link to={Routes.CONTACT}>
+                                Contact
+                            </Link>
+                        </p>
                     </div>
                 </div>
             </div>

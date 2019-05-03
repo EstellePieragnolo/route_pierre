@@ -1,7 +1,6 @@
 import React from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
 import Logo from '../Logo';
+import Social from '../Loader & logos/Social';
 import './_PreFooter.scss';
 
 export default class PreFooter extends React.Component {
@@ -32,35 +31,7 @@ export default class PreFooter extends React.Component {
                         <h4 className="prefooterContainerItemTitle">Nous suivre</h4>
 
                         <div className="prefooterContainerItemContent">
-                            <Query query={logo}>
-                                {({ data, loading }) => {
-                                    if (loading) return null;
-
-                                    return (
-                                        data.logoes &&
-                                        data.logoes.map(logos => {
-                                            if (logos.title === 'instaLogo') {
-                                                return (
-                                                    logos.logo &&
-                                                    <a className="prefooterContainerItemContentSocial" key={logos.id} href="https://www.instagram.com/laroutedelapierre/" target="_blank" rel="noopener noreferrer">
-                                                        <img src={logos.logo.url} className="containerBodyLinkFacebook" alt={logos.title} width={24} />
-                                                    </a>
-                                                )
-                                            }
-                                            else if (logos.title === 'facebookLogo') {
-                                                return (
-                                                    logos.logo &&
-                                                    <a className="prefooterContainerItemContentSocial" key={logos.id} href="https://www.facebook.com/La-Route-de-la-Pierre-587625451679647/" target="_blank" rel="noopener noreferrer">
-                                                        <img src={logos.logo.url} className="containerBodyLinkInstagram" alt={logos.title} width={24} />
-                                                    </a>
-                                                )
-                                            }
-                                            else return null;
-                                        })
-
-                                    );
-                                }}
-                            </Query>
+                            <Social />
                         </div>
 
 
@@ -70,16 +41,3 @@ export default class PreFooter extends React.Component {
         )
     }
 }
-
-
-export const logo = gql`
-  query {
-    logoes {        
-      id,
-      title,
-      logo {
-        url
-      }
-    }
-  }
-`
