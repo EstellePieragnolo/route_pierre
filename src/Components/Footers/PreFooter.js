@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from '../Logo';
-import Social from '../Loader & logos/Social';
+import Logo from '../Logos/Logo';
 import './_PreFooter.scss';
+import Social from '../Logos/Social';
 
 export default class PreFooter extends React.Component {
 
@@ -34,6 +34,7 @@ export default class PreFooter extends React.Component {
                             <Social
                                 direction="row"
                                 justify="center"
+                                margin="0 auto"
                                 width={24}
                             />
                         </div>

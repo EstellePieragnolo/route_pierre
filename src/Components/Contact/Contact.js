@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header';
-import Social from '../Loader & logos/Social';
+import Social from '../Logos/Social';
 import email from '../../img/email.png';
 import phone from '../../img/phone.png';
 import './_Contact.scss';

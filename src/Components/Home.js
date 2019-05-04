@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from './Logo';
+import Logo from './Logos/Logo';
 import Inspirations from './Inspirations';
 import ShopCategories from './Shop/ShopCategories';
 import PreFooter from './Footers/PreFooter';
