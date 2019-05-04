@@ -183,9 +183,12 @@
 }
 
 .notice {
+  min-height: calc(100vh - 35px);
+}
+.noticeBody {
   margin: 95px 0 0;
 }
-.noticeTitle {
+.noticeBodyTitle {
   text-align: center;
   font-size: 50px;
   padding: 0 0 75px;
@@ -193,31 +196,31 @@
   position: sticky;
   top: -60px;
 }
-.noticeContainer {
+.noticeBodyContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   max-width: 1240px;
   margin: auto;
 }
-.noticeContainerPictures {
+.noticeBodyContainerPictures {
   position: sticky;
   top: calc((100vh - 630px) / 2);
   width: 630px;
   height: 630px;
   margin: 0 25px 0;
 }
-.noticeContainerPictures img {
+.noticeBodyContainerPictures img {
   width: 630px;
 }
-.noticeContainerInfo {
+.noticeBodyContainerInfo {
   display: flex;
   flex-direction: column;
   margin: 0 0 66px 25px;
   padding: 30px;
   border: 1px solid #666;
 }
-.noticeContainerInfoSeparator {
+.noticeBodyContainerInfoSeparator {
   content: "";
   display: block;
   width: 43px;
@@ -226,21 +229,21 @@
   border-radius: 10px;
   margin: 30px auto;
 }
-.noticeContainerInfoHeader, .noticeContainerInfoList {
+.noticeBodyContainerInfoHeader, .noticeBodyContainerInfoList {
   text-align: center;
 }
-.noticeContainerInfoHeaderTitle, .noticeContainerInfoListTitle {
+.noticeBodyContainerInfoHeaderTitle, .noticeBodyContainerInfoListTitle {
   font-size: 35px;
   margin: 0 0 30px;
 }
-.noticeContainerInfoHeaderText, .noticeContainerInfoHeaderItem, .noticeContainerInfoListText, .noticeContainerInfoListItem {
+.noticeBodyContainerInfoHeaderText, .noticeBodyContainerInfoHeaderItem, .noticeBodyContainerInfoListText, .noticeBodyContainerInfoListItem {
   font-size: 22px;
   line-height: 33px;
 }
-.noticeContainerInfoListItem {
+.noticeBodyContainerInfoListItem {
   text-align: left;
 }
-.noticeContainerInfoFooter {
+.noticeBodyContainerInfoFooter {
   font-size: 35px;
 }
 

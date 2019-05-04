@@ -10,7 +10,7 @@ export default class ShopNotice extends React.Component {
     render() {
         const id = this.props.match.params.id ? this.props.match.params.id : null;
         return (
-            <div>
+            <div className='notice'>
                 <Header />
                 <Query query={notice}>
                     {({ data, loading, error }) => {
@@ -21,60 +21,60 @@ export default class ShopNotice extends React.Component {
                             data.creations.map(creation => {
                                 if (id === creation.id) {
                                     return (
-                                        <div className='notice'>
-                                            <h1 className='noticeTitle'>{creation.name}</h1>
-                                            <div className='noticeContainer'>
-                                                <div className='noticeContainerPictures'>
+                                        <div className='noticeBody'>
+                                            <h1 className='noticeBodyTitle'>{creation.name}</h1>
+                                            <div className='noticeBodyContainer'>
+                                                <div className='noticeBodyContainerPictures'>
                                                     <img src={creation.picture.url} alt="" />
                                                 </div>
-                                                <div className='noticeContainerInfo'>
-                                                    <div className='noticeContainerInfoHeader'>
-                                                        <h3 className='noticeContainerInfoHeaderTitle'>Description</h3>
-                                                        <p className='noticeContainerInfoHeaderText'>{creation.description.text}</p>
+                                                <div className='noticeBodyContainerInfo'>
+                                                    <div className='noticeBodyContainerInfoHeader'>
+                                                        <h3 className='noticeBodyContainerInfoHeaderTitle'>Description</h3>
+                                                        <p className='noticeBodyContainerInfoHeaderText'>{creation.description.text}</p>
                                                     </div>
-                                                    <span className='noticeContainerInfoSeparator'></span>
-                                                    <div className='noticeContainerInfoList'>
-                                                        <h3 className='noticeContainerInfoListTitle'>Fiche technique</h3>
+                                                    <span className='noticeBodyContainerInfoSeparator'></span>
+                                                    <div className='noticeBodyContainerInfoList'>
+                                                        <h3 className='noticeBodyContainerInfoListTitle'>Fiche technique</h3>
                                                         {
                                                             creation.stone &&
-                                                            <p className='noticeContainerInfoListItem'>
+                                                            <p className='noticeBodyContainerInfoListItem'>
                                                                 - Nature de pierre: {creation.stone}
                                                             </p>
                                                         }
                                                         {
                                                             creation.origin &&
-                                                            <p className='noticeContainerInfoListItem'>
+                                                            <p className='noticeBodyContainerInfoListItem'>
                                                                 - Provenance: {creation.origin}
                                                             </p>
                                                         }
                                                         {
                                                             creation.steel &&
-                                                            <p className='noticeContainerInfoListItem'>
+                                                            <p className='noticeBodyContainerInfoListItem'>
                                                                 - Acier de l'émouture: {creation.steel}
                                                             </p>
                                                         }
                                                         {
                                                             creation.dimension &&
-                                                            <p className='noticeContainerInfoListItem'>
+                                                            <p className='noticeBodyContainerInfoListItem'>
                                                                 - Dimension: {creation.dimension}
                                                             </p>
                                                         }
                                                         {
                                                             creation.finish &&
-                                                            <p className='noticeContainerInfoListItem'>
+                                                            <p className='noticeBodyContainerInfoListItem'>
                                                                 - Finitions: {creation.finish}
                                                             </p>
                                                         }
                                                         {
                                                             creation.maintain &&
-                                                            <p className='noticeContainerInfoListItem'>
+                                                            <p className='noticeBodyContainerInfoListItem'>
                                                                 - Entretien: {creation.maintain}
                                                             </p>
                                                         }
-                                                        <span className='noticeContainerInfoSeparator'></span>
+                                                        <span className='noticeBodyContainerInfoSeparator'></span>
                                                         {
                                                             creation.price &&
-                                                            <h3 className='noticeContainerInfoFooter'>Prix: {creation.price}€</h3>
+                                                            <h3 className='noticeBodyContainerInfoFooter'>Prix: {creation.price}€</h3>
                                                         }
 
                                                     </div>

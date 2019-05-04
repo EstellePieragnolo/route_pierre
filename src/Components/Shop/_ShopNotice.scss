@@ -1,77 +1,81 @@
 @import '../../_variables.scss';
 
 .notice {
-    margin: 95px 0 0;
+    min-height: calc(100vh - 35px);
 
-    &Title {
-        text-align: center;
-        font-size: 50px;
-        padding: 0 0 75px;
-        background-color: white;
-        position: sticky;
-        top: -60px;
-    }
+    &Body {
+        margin: 95px 0 0;
 
-    &Container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        max-width: 1240px;
-        margin: auto;
-
-        &Pictures {
+        &Title {
+            text-align: center;
+            font-size: 50px;
+            padding: 0 0 75px;
+            background-color: white;
             position: sticky;
-            top: calc((100vh - 630px) / 2);
-            width: 630px;
-            height: 630px;
-            margin: 0 25px 0;
-
-            img {
-                width: 630px;
-            }
+            top: -60px;
         }
 
-        &Info {
+        &Container {
             display: flex;
-            flex-direction: column;
-            margin: 0 0 66px 25px;
-            padding: 30px;
-            border: 1px solid $grey;
+            flex-direction: row;
+            justify-content: center;
+            max-width: 1240px;
+            margin: auto;
 
-            &Separator {
-                content: '';
-                display: block;
-                width: 43px;
-                height: 8px;
-                background-color: $yellow;
-                border-radius: 10px;
-                margin: 30px auto;
+            &Pictures {
+                position: sticky;
+                top: calc((100vh - 630px) / 2);
+                width: 630px;
+                height: 630px;
+                margin: 0 25px 0;
+
+                img {
+                    width: 630px;
+                }
             }
 
-            &Header,
-            &List {
-                text-align: center;
+            &Info {
+                display: flex;
+                flex-direction: column;
+                margin: 0 0 66px 25px;
+                padding: 30px;
+                border: 1px solid $grey;
 
-                &Title {
+                &Separator {
+                    content: '';
+                    display: block;
+                    width: 43px;
+                    height: 8px;
+                    background-color: $yellow;
+                    border-radius: 10px;
+                    margin: 30px auto;
+                }
+
+                &Header,
+                &List {
+                    text-align: center;
+
+                    &Title {
+                        font-size: 35px;
+                        margin: 0 0 30px;
+                    }
+
+                    &Text,
+                    &Item {
+                        font-size: 22px;
+                        line-height: 33px;
+                    }
+                }
+
+                &List {
+                    &Item {
+                        text-align: left;
+                    }
+                }
+
+                &Footer {
                     font-size: 35px;
-                    margin: 0 0 30px;
                 }
-
-                &Text,
-                &Item {
-                    font-size: 22px;
-                    line-height: 33px;
-                }
-            }
-
-            &List {
-                &Item {
-                    text-align: left;
-                }
-            }
-
-            &Footer {
-                font-size: 35px;
             }
         }
     }
