@@ -71,7 +71,7 @@ export default class Shop extends React.Component {
                                             />
                                         )
                                     }
-
+                                    else return null
                                 })
 
                             );

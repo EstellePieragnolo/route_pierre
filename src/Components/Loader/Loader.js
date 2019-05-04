@@ -18,7 +18,7 @@ export default class Loader extends React.Component {
                             if (logos.title === 'mainLogo') {
                                 return (
                                     logos.logo &&
-                                    <div className="loader">
+                                    <div key={logos.id} className="loader">
                                         <img
                                             key={logos.id}
                                             src={logos.logo.url}
