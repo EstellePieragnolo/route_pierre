@@ -5,12 +5,41 @@ import Loader from '../Loader/Loader';
 import Header from '../Header/Header';
 
 export default class ShopNotice extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            titleAlign: 'Center'
+        }
+    }
 
+    componentDidMount() {
+        window.addEventListener('scroll', this.scrollTop);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.scrollTop);
+    }
+
+
+    scrollTop = () => {
+        if (window.pageYOffset > 0 && this.state.titleAlign !== 'Left') {
+            this.setState({
+                titleAlign: 'Left'
+            })
+            return this.state.titleAlign
+        }
+        else if (window.pageYOffset === 0 && this.state.titleAlign !== 'Center') {
+            this.setState({
+                titleAlign: 'Center'
+            })
+            return this.state.titleAlign
+        }
+    }
 
     render() {
         const id = this.props.match.params.id ? this.props.match.params.id : null;
         return (
-            <div className='notice'>
+            <div className='notice' onScroll={this.scrollTop}>
                 <Header />
                 <Query query={notice}>
                     {({ data, loading, error }) => {
@@ -22,7 +51,9 @@ export default class ShopNotice extends React.Component {
                                 if (id === creation.id) {
                                     return (
                                         <div className='noticeBody'>
-                                            <h1 className='noticeBodyTitle'>{creation.name}</h1>
+                                            <div className='noticeBodyTitle' style={this.state.titleAlign === 'Left' ? { position: 'sticky', top: '95px' } : null}>
+                                                <h1 className={'noticeBodyTitle' + (this.state.titleAlign)}>{creation.name}</h1>
+                                            </div>
                                             <div className='noticeBodyContainer'>
                                                 <div className='noticeBodyContainerPictures'>
                                                     <img src={creation.picture.url} alt="" />
