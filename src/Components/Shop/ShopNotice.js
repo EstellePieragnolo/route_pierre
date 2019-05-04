@@ -9,7 +9,6 @@ export default class ShopNotice extends React.Component {
 
     render() {
         const id = this.props.match.params.id ? this.props.match.params.id : null;
-        console.log(this.props.match.params)
         return (
             <div>
                 <Header />

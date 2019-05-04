@@ -19,11 +19,11 @@ export default class ShopCategories extends React.Component {
                             data.introShops &&
                             data.introShops.map(introShop => {
                                 return (
-                                    <Link to={Routes.SHOP}>
-                                        <div className="homeShopCategoryItems">
+                                    <Link to={Routes.SHOP} >
+                                        <div key={introShop.id} className="homeShopCategoryItems">
                                             {
                                                 introShop.image &&
-                                                <div key={introShop.id} className="homeShopCategoryItemsImage">
+                                                <div className="homeShopCategoryItemsImage">
                                                     <img src={introShop.image.url} alt="shopCategories" width="360" />
                                                 </div>
                                             }

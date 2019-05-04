@@ -6,23 +6,7 @@ import PreFooter from './Footers/PreFooter';
 import './_Home.scss';
 import Header from './Header/Header';
 
-// const documentScrollTop = () => {
-//   return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-// };
-
 export default class Home extends React.Component {
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.onScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
-  }
-
-  onScroll = () => {
-    console.log(window.pageYOffset)
-  }
 
   render() {
 

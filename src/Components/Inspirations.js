@@ -14,7 +14,7 @@ export default class Inspirations extends React.Component {
                         data.inspirations &&
                         data.inspirations.map(inspiration => {
                             return (
-                                <div className="homeShopInspiration">
+                                <div key={inspiration.id} className="homeShopInspiration">
                                     <h3 className="homeShopInspirationTitle">
                                         {inspiration.title}
                                     </h3>
