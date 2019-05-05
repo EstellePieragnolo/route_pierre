@@ -1,26 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Arvo|Raleway");
 .homeHeader {
-  pointer-events: none;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.homeHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  margin: auto 0;
+  align-content: center;
   padding: 0 100px;
   z-index: 1;
 }
-.homeHeaderItems {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.homeHeaderItemsLogo {
-  position: absolute;
-}
-.homeHeaderItemsTitle {
+.homeHeaderContainerItemsTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +23,12 @@
   z-index: 2;
   text-transform: uppercase;
   padding-bottom: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
 }
-.homeHeaderSubtitle {
+.homeHeaderContainerSubtitle {
   margin: 161px 0 0;
   font-size: 34px;
   text-align: center;
@@ -49,6 +47,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0 0 150px;
 }
 .homeShopCategoryItems {

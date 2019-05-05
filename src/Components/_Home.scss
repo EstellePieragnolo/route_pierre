@@ -1,46 +1,45 @@
 @import '../_variables.scss';
 
 .home {
-
     &Header {
-        pointer-events: none;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
         height: 100vh;
-        padding: 0 100px;
-        z-index: 1;
+        display: flex;
+        flex-direction: column;
 
-        &Items {
-            position: relative;
+        &Container {
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
+            justify-content: center;
+            pointer-events: none;
+            margin: auto 0;
+            align-content: center;
+            padding: 0 100px;
+            z-index: 1;
 
-            &Logo {
-                position: absolute;
+
+            &Items {
+                &Title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 80px;
+                    height: 390px;
+                    z-index: 2;
+                    text-transform: uppercase;
+                    padding-bottom: 20px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    padding: 0;
+                }
             }
 
-            &Title {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 80px;
-                height: 390px;
-                z-index: 2;
-                text-transform: uppercase;
-                padding-bottom: 20px;
+            &Subtitle {
+                margin: 161px 0 0;
+                font-size: 34px;
+                text-align: center;
+                letter-spacing: 0.5px;
             }
-        }
-
-        &Subtitle {
-            margin: 161px 0 0;
-            font-size: 34px;
-            text-align: center;
-            letter-spacing: 0.5px;
         }
     }
 
@@ -58,6 +57,7 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
+            flex-wrap: wrap;
             margin: 0 0 150px;
 
             &Items {
