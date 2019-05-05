@@ -24,7 +24,7 @@ export default class ShopCategories extends React.Component {
                                             {
                                                 introShop.image &&
                                                 <div className="homeShopCategoryItemsImage">
-                                                    <img src={introShop.image.url} alt="shopCategories" width="360" />
+                                                    <img src={introShop.image.url} alt="shopCategories" className="homeShopCategoryItemsImageElement" />
                                                 </div>
                                             }
                                             <div className="homeShopCategoryItemsHover">

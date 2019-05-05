@@ -9,7 +9,6 @@ import Header from './Header/Header';
 export default class Home extends React.Component {
 
   render() {
-    console.log(this.back)
     return (
       <div className="home">
         <div className="homeNavbar">
@@ -28,7 +27,7 @@ export default class Home extends React.Component {
         </div>
         <div className="homeShop">
           <h2 className="homeShopTitle">Le magasin</h2>
-          <ShopCategories shopCategory={this.shopCategory} />
+          <ShopCategories />
           <Inspirations />
           <PreFooter />
         </div>

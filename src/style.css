@@ -26,6 +26,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  text-align: center;
   padding: 0;
 }
 .homeHeaderContainerSubtitle {
@@ -35,7 +36,7 @@
   letter-spacing: 0.5px;
 }
 .homeShop {
-  margin: 0;
+  margin: 85px 0 0;
 }
 .homeShopTitle {
   font-size: 70px;
@@ -46,15 +47,15 @@
 .homeShopCategory {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 0 150px;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin: 0 auto 150px;
+  max-width: 1240px;
 }
 .homeShopCategoryItems {
   position: relative;
-  margin: 0 40px;
-  width: 360px;
-  height: 360px;
+  max-width: calc(1080px / 3);
+  width: calc((100vw - 120px) / 3);
   cursor: pointer;
 }
 .homeShopCategoryItemsHover {
@@ -73,6 +74,10 @@
 }
 .homeShopCategoryItems:hover > .homeShopCategoryItemsHover {
   display: flex;
+}
+.homeShopCategoryItemsImageElement {
+  width: calc((100vw - 120px) / 3);
+  max-width: calc(1080px / 3);
 }
 .homeShopInspiration {
   display: flex;

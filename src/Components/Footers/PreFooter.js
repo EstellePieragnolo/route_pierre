@@ -22,7 +22,7 @@ export default class PreFooter extends React.Component {
                         <p className="prefooterContainerItemContent">Mentions légales</p>
                         <p className="prefooterContainerItemContent">Service après vente</p>
                     </div>
-                    <Logo height={'110px'} />
+                    <Logo height={'110px'} image='img' />
                     <div className="prefooterContainerItem">
                         <h4 className="prefooterContainerItemTitle">Contact</h4>
                         <p className="prefooterContainerItemContent">laroutedelapierre@gmail.com</p>
