@@ -7,6 +7,7 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from 'react-apollo';
+import store from './redux/store'
 
 const GRAPHCMS_API = 'https://api-euwest.graphcms.com/v1/cjtfsm7n222qb01b99hezu8j5/master'
 
@@ -16,7 +17,7 @@ const client = new ApolloClient({
 })
 
 ReactDOM.render(
-    <ApolloProvider client={client}>
+    <ApolloProvider client={client} store={store}>
         <App />
     </ApolloProvider>,
     document.getElementById('root')
