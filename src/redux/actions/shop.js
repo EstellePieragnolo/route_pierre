@@ -1,8 +1,8 @@
-import { CATEGORY_TYPE } from './actionTypes'
+import { CATEGORY_TYPE } from "./actionTypes";
 
-export const category = (payload, data) => ({
-    category: CATEGORY_TYPE,
-    payload: {
-        category: data.introShop.category
-      }
-})
+export const category = category => ({
+  type: CATEGORY_TYPE,
+  playload: {
+    category: category
+  }
+});

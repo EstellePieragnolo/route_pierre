@@ -12,7 +12,7 @@ class ShopCategories extends React.Component {
     return (
       <div className="homeShopCategory">
         <Query query={items}>
-          {({ data, loading, error }) => {
+          {({ data, loading, error, category }) => {
             if (loading) return <Loader />;
             if (error) return <p>ERROR</p>;
             return (
@@ -30,7 +30,7 @@ class ShopCategories extends React.Component {
                           />
                         </div>
                       )}
-                      <div className="homeShopCategoryItemsHover">
+                      <div className="homeShopCategoryItemsHover" onClick={() => category(introShop.category)}>
                         <p>{introShop.category}</p>
                       </div>
                     </div>
@@ -47,14 +47,14 @@ class ShopCategories extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    category: () => dispatch(shopActions.category())
+    category: (category) => dispatch(shopActions.category(category))
   };
 };
 
 const mapStateToProps = state => {
-  console.log("sho", state.shop);
+  console.log("sho", state.category);
   return {
-    category: state.shop.category
+    category: state.category
   };
 };
 
