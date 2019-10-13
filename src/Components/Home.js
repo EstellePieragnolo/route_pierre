@@ -1,13 +1,12 @@
-import React from 'react';
-import Logo from './Logos/Logo';
-import Inspirations from './Inspirations';
-import ShopCategories from './Shop/ShopCategories';
-import PreFooter from './Footers/PreFooter';
-import './_Home.scss';
-import Header from './Header/Header';
+import React from "react";
+import Inspirations from "./Inspirations";
+import ShopCategories from "./Shop/ShopCategories";
+import PreFooter from "./Footers/PreFooter";
+import "./_Home.scss";
+import Header from "./Header/Header";
+import logo from "../img/logo.svg";
 
 export default class Home extends React.Component {
-
   render() {
     return (
       <div className="home">
@@ -17,11 +16,11 @@ export default class Home extends React.Component {
         <div className="homeHeader">
           <div className="homeHeaderContainer">
             <div className="homeHeaderContainerItems">
-              <Logo height={'390px'} image="title" />
+              <img src={logo} alt="logo" />
+              <h1>LA ROUTE DE LA PIERRE</h1>
             </div>
             <div className="homeHeaderContainerSubtitle">
-              <h3>Créations en taille pierre </h3>
-              <h3>par Orianne & Louis</h3>
+              <h3>Créations en taille pierre <br/> par Orianne & Louis</h3>
             </div>
           </div>
         </div>
@@ -31,7 +30,7 @@ export default class Home extends React.Component {
           <Inspirations />
           <PreFooter />
         </div>
-      </div >
-    )
+      </div>
+    );
   }
 }

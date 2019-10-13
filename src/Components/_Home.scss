@@ -1,180 +1,273 @@
-@import '../_variables.scss';
+@import "../_variables.scss";
 
 .home {
-    &Header {
-        height: 100vh;
+  &Header {
+    &Container {
+      &Items {
+        position: relative;
+        height: 75vh;
         display: flex;
         flex-direction: column;
-
-        &Container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            pointer-events: none;
-            margin: auto 0;
-            align-content: center;
-            padding: 0 100px;
-            z-index: 1;
-
-
-            &Items {
-                &Title {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 80px;
-                    height: 390px;
-                    z-index: 2;
-                    text-transform: uppercase;
-                    padding-bottom: 20px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    text-align: center;
-                    padding: 0;
-                }
-            }
-
-            &Subtitle {
-                margin: 161px 0 0;
-                font-size: 34px;
-                text-align: center;
-                letter-spacing: 0.5px;
-            }
+        justify-content: center;
+        img {
+          position: absolute;
+          margin: 0 auto;
+          left: calc(50% - 200px);
+          width: 400px;
         }
+        h1 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 80px;
+          z-index: 2;
+          text-transform: uppercase;
+          text-align: center;
+          padding: 0;
+        }
+      }
+
+      &Subtitle {
+       h3 {
+        font-size: 34px;
+        text-align: center;
+        letter-spacing: 0.5px;
+       }
+      }
+    }
+  }
+
+  &Shop {
+    margin: 85px 0 0;
+
+    &Title {
+      font-size: 70px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 210px 0 115px;
     }
 
-    &Shop {
-        margin: 85px 0 0;
+    &Category {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      margin: 0 auto 150px;
+      max-width: 1240px;
 
-        &Title {
-            font-size: 70px;
-            text-align: center;
-            text-transform: uppercase;
-            margin: 210px 0 115px;
+      &Items {
+        position: relative;
+        max-width: calc(1080px / 3);
+        width: calc((100vw - 120px) / 3);
+        cursor: pointer;
+
+        &Hover {
+          position: absolute;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #f5e77a;
+
+          p {
+            font-size: 35px;
+          }
         }
 
-        &Category {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            flex-wrap: nowrap;
-            margin: 0 auto 150px;
-            max-width: 1240px;
-
-            &Items {
-                position: relative;
-                max-width: calc(1080px / 3);
-                width: calc((100vw - 120px) / 3);
-                cursor: pointer;
-
-                &Hover {
-                    position: absolute;
-                    display: none;
-                    align-items: center;
-                    justify-content: center;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: #F5E77A;
-
-                    p {
-                        font-size: 35px;
-                    }
-                }
-
-                &:hover>&Hover {
-                    display: flex;
-                }
-
-                &Image {
-                    &Element {
-                        width: calc((100vw - 120px) / 3);
-                        max-width: calc(1080px / 3);
-                    }
-                }
-            }
+        &:hover > &Hover {
+          display: flex;
         }
 
-        &Inspiration {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0;
-            padding: 137px 0;
-            background-color: $yellow;
-
-            &Title {
-                text-align: center;
-                font-size: 45px;
-                margin: 0 0 55px;
-            }
-
-            &Description {
-                font-size: 22px;
-                line-height: 33px;
-                max-width: 1240px;
-                margin: 0 auto;
-                text-align: center;
-
-            }
+        &Image {
+          &Element {
+            width: calc((100vw - 120px) / 3);
+            max-width: calc(1080px / 3);
+          }
         }
+      }
     }
+
+    &Inspiration {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 137px 0;
+      background-color: $yellow;
+
+      &Title {
+        text-align: center;
+        font-size: 45px;
+        margin: 0 0 55px;
+      }
+
+      &Description {
+        font-size: 22px;
+        line-height: 33px;
+        max-width: 1240px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 768px) {
-    .home {
-        &Shop {
-            margin: 85px 0 0;
-
-            &Title {
-                font-size: 70px;
-                text-align: center;
-                text-transform: uppercase;
-                margin: 210px 0 115px;
-            }
-
-            &Category {
-                flex-direction: column;
-
-                &Items {
-                    position: relative;
-                    max-width: calc(1080px / 3);
-                    width: calc(100vw - 120px);
-                    cursor: pointer;
-                    margin: 40px auto;
-
-                    &Hover {
-                        position: absolute;
-                        display: none;
-                        align-items: center;
-                        justify-content: center;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: #F5E77A;
-
-                        p {
-                            font-size: 35px;
-                        }
-                    }
-
-                    &Hover {
-                        display: flex;
-                        align-content: flex-end;
-                        height: calc(100% / 4);
-
-                    }
-
-                    &Image {
-                        &Element {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .home {
+    &Header {
+      &Container {
+        &Items {
+          img {
+            left: calc(50% - 135px);
+            width: 270px;
+          }
+          h1 {
+            font-size: 55px;
+            line-height: 65px;
+          }
         }
+
+        &Subtitle {
+           h3 {
+            font-size: 26px;
+            line-height: 32px;
+            letter-spacing: 0.5px;
+           }
+        }
+      }
     }
+    &Shop {
+      margin: 85px 0 0;
+
+      &Title {
+        font-size: 70px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 210px 0 115px;
+      }
+
+      &Category {
+        flex-direction: column;
+
+        &Items {
+          position: relative;
+          max-width: calc(1080px / 3);
+          width: calc(100vw - 120px);
+          cursor: pointer;
+          margin: 40px auto;
+
+          &Hover {
+            position: absolute;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f5e77a;
+
+            p {
+              font-size: 35px;
+            }
+          }
+
+          &Hover {
+            display: flex;
+            align-content: flex-end;
+            height: calc(100% / 4);
+          }
+
+          &Image {
+            &Element {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .home {
+    &Header {
+      &Container {
+        &Items {
+            img {
+              left: calc(50% - 70px);
+              width: 140px;
+            }
+            h1 {
+                font-size: 28px;
+                line-height: 33px;
+            }
+          }
+
+        &Subtitle {
+           h3 {
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.5px;
+           }
+        }
+      }
+    }
+    &Shop {
+      margin: 85px 0 0;
+
+      &Title {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.5px;
+
+        text-transform: uppercase;
+        margin: 210px 0 115px;
+      }
+
+      &Category {
+        flex-direction: column;
+
+        &Items {
+          position: relative;
+          max-width: calc(1080px / 3);
+          width: calc(100vw - 120px);
+          cursor: pointer;
+          margin: 40px auto;
+
+          &Hover {
+            position: absolute;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f5e77a;
+
+            p {
+              font-size: 35px;
+            }
+          }
+
+          &Hover {
+            display: flex;
+            align-content: flex-end;
+            height: calc(100% / 4);
+          }
+
+          &Image {
+            &Element {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
