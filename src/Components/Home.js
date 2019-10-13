@@ -26,6 +26,7 @@ export default class Home extends React.Component {
         </div>
         <div className="homeShop">
           <h2 className="homeShopTitle">Le magasin</h2>
+          <h3>Nos créations</h3>
           <ShopCategories />
           <Inspirations />
           <PreFooter />

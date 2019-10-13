@@ -28,11 +28,11 @@
       }
 
       &Subtitle {
-       h3 {
-        font-size: 34px;
-        text-align: center;
-        letter-spacing: 0.5px;
-       }
+        h3 {
+          font-size: 34px;
+          text-align: center;
+          letter-spacing: 0.5px;
+        }
       }
     }
   }
@@ -45,6 +45,14 @@
       text-align: center;
       text-transform: uppercase;
       margin: 210px 0 115px;
+    }
+    h3 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+      margin-bottom: 70px;
     }
 
     &Category {
@@ -131,11 +139,11 @@
         }
 
         &Subtitle {
-           h3 {
+          h3 {
             font-size: 26px;
             line-height: 32px;
             letter-spacing: 0.5px;
-           }
+          }
         }
       }
     }
@@ -148,6 +156,10 @@
         text-transform: uppercase;
         margin: 210px 0 115px;
       }
+      h3 {
+        font-size: 26px;
+        line-height: 32px;
+      }
 
       &Category {
         flex-direction: column;
@@ -188,6 +200,13 @@
           }
         }
       }
+      &Inspiration {
+        padding: 110px 30px;
+      &Description {
+        font-size: 16px;
+        line-height: 29px;
+      }
+    }
     }
   }
 }
@@ -195,24 +214,25 @@
 @media screen and (max-width: 575px) {
   .home {
     &Header {
+      height: 100vh;
       &Container {
         &Items {
-            img {
-              left: calc(50% - 70px);
-              width: 140px;
-            }
-            h1 {
-                font-size: 28px;
-                line-height: 33px;
-            }
+          img {
+            left: calc(50% - 70px);
+            width: 140px;
           }
+          h1 {
+            font-size: 28px;
+            line-height: 33px;
+          }
+        }
 
         &Subtitle {
-           h3 {
+          h3 {
             font-size: 14px;
             line-height: 17px;
             letter-spacing: 0.5px;
-           }
+          }
         }
       }
     }
@@ -220,24 +240,26 @@
       margin: 85px 0 0;
 
       &Title {
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        letter-spacing: 0.5px;
-
-        text-transform: uppercase;
-        margin: 210px 0 115px;
+        font-size: 36px;
+        line-height: 42px;
+        margin: 50px 0;
+      }
+      h3 {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 55px;
       }
 
       &Category {
         flex-direction: column;
+        padding: 0 40px;
+        margin: 0;
 
         &Items {
           position: relative;
-          max-width: calc(1080px / 3);
-          width: calc(100vw - 120px);
+          width: 100%;
           cursor: pointer;
-          margin: 40px auto;
+          margin: 0 auto 40px;
 
           &Hover {
             position: absolute;
@@ -247,8 +269,8 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background-color: #f5e77a;
+            // height: 100%;
+            // background-color: #f5e77a;
 
             p {
               font-size: 35px;
@@ -266,6 +288,13 @@
               width: 100%;
             }
           }
+        }
+      }
+      &Inspiration {
+          padding: 50px 20px;
+        &Description {
+          font-size: 12px;
+          line-height: 23px;
         }
       }
     }
