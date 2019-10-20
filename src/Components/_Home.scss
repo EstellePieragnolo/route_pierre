@@ -32,6 +32,9 @@
           font-size: 34px;
           text-align: center;
           letter-spacing: 0.5px;
+          span {
+            color: #f5e77a;
+          }
         }
       }
     }
@@ -219,12 +222,12 @@
         &Items {
           margin: 0 15px;
           img {
-            left: calc(50% - 70px);
-            width: 140px;
+            left: calc(50% - 125px);
+            width: 250px;
           }
           h1 {
-            font-size: 30px;
-            line-height: 33px;
+            font-size: 45px;
+            line-height: unset;
           }
         }
 

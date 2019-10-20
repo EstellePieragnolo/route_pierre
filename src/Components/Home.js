@@ -20,7 +20,7 @@ export default class Home extends React.Component {
               <h1>LA ROUTE DE LA PIERRE</h1>
             </div>
             <div className="homeHeaderContainerSubtitle">
-              <h3>Créations en taille pierre <br/> par Orianne & Louis</h3>
+              <h3>Créations en taille pierre <br/> par Orianne <span>&</span> Louis</h3>
             </div>
           </div>
         </div>
