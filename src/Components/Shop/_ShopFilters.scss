@@ -1,38 +1,51 @@
-@import '../../_variables.scss';
+@import "../../_variables.scss";
 
 .filters {
-    &Container {
+  &Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 105px 0 0;
+
+    &Item {
+      &Unselected,
+      &Selected {
+        margin: 0 50px;
+        width: 224px;
+        height: 55px;
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: center;
-        margin: 105px 0 0;
+        font-family: "Arvo", serif;
+        color: $grey;
+        font-size: 22px;
+        box-shadow: 0px 3px 8px rgba(89, 89, 89, 0.15);
+        border-radius: 5px;
+        cursor: pointer;
 
-        &Item {
-
-            &Unselected,
-            &Selected {
-                margin: 0 50px;
-                width: 224px;
-                height: 55px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                font-family: 'Arvo', serif;
-                color: $grey;
-                font-size: 22px;
-                box-shadow: 0px 3px 8px rgba(89, 89, 89, 0.15);
-                border-radius: 5px;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: $yellow;
-                }
-            }
-
-            &Selected {
-                background-color: $yellow;
-            }
+        &:hover {
+          background-color: $yellow;
         }
+      }
+
+      &Selected {
+        background-color: $yellow;
+      }
     }
+  }
+  @media screen and (max-width: 575px) {
+    &Container {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0 20px;
+      &Item {
+        &Unselected,
+        &Selected {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+      }
+    }
+  }
 }
