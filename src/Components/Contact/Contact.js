@@ -15,7 +15,7 @@ export default class App extends React.Component {
                 <h1 className='contactTitle'>Contact</h1>
                 <div className='contactContainer'>
                     <div className='contactContainerItem'>
-                        <h3 className='contactContainerItemTitle'>Nous joindre :</h3>
+                        <h2 className='contactContainerItemTitle'>Nous joindre :</h2>
                         <div className='contactContainerItemInfo'>
                             <p>
                                 <img src={email} alt="logoEmail" className='contactContainerItemInfoEmail' />
@@ -28,7 +28,7 @@ export default class App extends React.Component {
                         </div>
                     </div>
                     <div className='contactContainerItem'>
-                        <h3 className='contactContainerItemTitle'>Nous suivre :</h3>
+                        <h2 className='contactContainerItemTitle'>Nous suivre :</h2>
                         <div className='contactContainerItemInfo'>
                             <Social
                                 direction="row"
