@@ -217,19 +217,20 @@
       height: 100vh;
       &Container {
         &Items {
+          margin: 0 15px;
           img {
             left: calc(50% - 70px);
             width: 140px;
           }
           h1 {
-            font-size: 28px;
+            font-size: 30px;
             line-height: 33px;
           }
         }
 
         &Subtitle {
           h3 {
-            font-size: 14px;
+            font-size: 18px;
             line-height: 17px;
             letter-spacing: 0.5px;
           }
