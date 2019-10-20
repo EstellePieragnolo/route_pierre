@@ -83,18 +83,18 @@
   }
 }
 
-@media screen and (max-width: 575px) {
+
+@media screen and (max-width: 768px) {
   .menuOpen {
-      &Close {
-          
-          &:before,
-          &:after {
-            top: 25px;
-            right: 50px;
-            left: unset;
-            height: 30px;
-          }
+    &Close {
+      &:before,
+      &:after {
+        top: 30px;
+        right: 40px;
+        left: unset;
+        height: 30px;
       }
+    }
     &Container {
       &Title {
         font-size: 50px;
