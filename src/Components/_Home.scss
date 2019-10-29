@@ -241,7 +241,9 @@
       }
     }
     &Shop {
-      margin: 85px 0 0;
+      box-shadow: 1px 20px rgba(89, 89, 89, 0.15);
+      padding: 35px 0 0;
+      margin: 0;
 
       &Title {
         font-size: 40px;
