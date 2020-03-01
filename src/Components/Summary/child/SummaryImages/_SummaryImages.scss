@@ -1,18 +1,21 @@
-@import "../../../_variables.scss";
+@import "../../../../_variables.scss";
 
 .images {
   position: relative;
+  margin: 0 50px 100px 0;
+
   &_container {
     width: 360px;
     height: 360px;
-    margin: 0 0 100px;
     overflow: hidden;
     display: inline-block;
     cursor: pointer;
+
     &:hover span {
       transform: scale(1.2);
       transition: all .5s;
     }
+
     span {
       width: 100%;
       height: 100%;
