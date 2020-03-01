@@ -4,6 +4,10 @@ import Header from "./Header/Header";
 import logo from "../img/logo.svg";
 import Text from "./Text/Text";
 import Title from "./Title/Title";
+import SummaryImages from "./Summary/child/SummaryImages/SummaryImages";
+import flower from "../img/flower.jpg";
+import SummaryContent from "./Summary/child/SummaryContent/SummaryContent";
+import Summary from "./Summary/Summary";
 
 export default class Home extends React.Component {
   render() {
@@ -30,8 +34,13 @@ export default class Home extends React.Component {
         </div>
         <div className="homeShop">
           <div>
-          <Title title="Le Project" />
-          <Text text={text} />
+            <Title title="Le Project" />
+            <Text text={text} />
+            <Summary
+              src={flower}
+              title="Taille de Pierre"
+              text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod"
+            />
           </div>
         </div>
       </div>

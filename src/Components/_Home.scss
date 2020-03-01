@@ -44,7 +44,7 @@
 /** UNCOMMENT IF SHOP IS BACK IN HOMEPAGE **/
 
   &Shop {
-    margin: 85px 0 0;
+   @include max-margin;
 
     // &Title {
     //   font-size: 70px;
