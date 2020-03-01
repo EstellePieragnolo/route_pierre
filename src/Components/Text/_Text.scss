@@ -1,0 +1,16 @@
+@import "../../_variables.scss";
+
+.text {
+  margin: 50px 0;
+  p {
+    font-size: 22px;
+    line-height: 33px;
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+.yellow {
+  background-color: $yellow;
+}
