@@ -1,2 +1,9 @@
 $yellow: #F5E77A;
 $grey: #666;
+
+// Fonts
+@mixin title {
+  text-align: center;
+  font-size: 45px;
+  margin: 0 0 55px;
+}
