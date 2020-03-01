@@ -41,66 +41,68 @@
     }
   }
 
+/** UNCOMMENT IF SHOP IS BACK IN HOMEPAGE **/
+
   &Shop {
     margin: 85px 0 0;
 
-    &Title {
-      font-size: 70px;
-      text-align: center;
-      text-transform: uppercase;
-      margin: 210px 0 115px;
-    }
-    h3 {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 36px;
-      line-height: 44px;
-      text-align: center;
-      margin-bottom: 70px;
-    }
+    // &Title {
+    //   font-size: 70px;
+    //   text-align: center;
+    //   text-transform: uppercase;
+    //   margin: 210px 0 115px;
+    // }
+    // h3 {
+    //   font-style: normal;
+    //   font-weight: normal;
+    //   font-size: 36px;
+    //   line-height: 44px;
+    //   text-align: center;
+    //   margin-bottom: 70px;
+    // }
 
-    &Category {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      flex-wrap: nowrap;
-      margin: 0 auto 150px;
-      max-width: 1240px;
+    // &Category {
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: space-around;
+    //   flex-wrap: nowrap;
+    //   margin: 0 auto 150px;
+    //   max-width: 1240px;
 
-      &Items {
-        position: relative;
-        max-width: calc(1080px / 3);
-        width: calc((100vw - 120px) / 3);
-        cursor: pointer;
+    //   &Items {
+    //     position: relative;
+    //     max-width: calc(1080px / 3);
+    //     width: calc((100vw - 120px) / 3);
+    //     cursor: pointer;
 
-        &Hover {
-          position: absolute;
-          display: none;
-          align-items: center;
-          justify-content: center;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: #f5e77a;
+    //     &Hover {
+    //       position: absolute;
+    //       display: none;
+    //       align-items: center;
+    //       justify-content: center;
+    //       top: 0;
+    //       left: 0;
+    //       width: 100%;
+    //       height: 100%;
+    //       background-color: #f5e77a;
 
-          p {
-            font-size: 35px;
-          }
-        }
+    //       p {
+    //         font-size: 35px;
+    //       }
+    //     }
 
-        &:hover > &Hover {
-          display: flex;
-        }
+    //     &:hover > &Hover {
+    //       display: flex;
+    //     }
 
-        &Image {
-          &Element {
-            width: calc((100vw - 120px) / 3);
-            max-width: calc(1080px / 3);
-          }
-        }
-      }
-    }
+    //     &Image {
+    //       &Element {
+    //         width: calc((100vw - 120px) / 3);
+    //         max-width: calc(1080px / 3);
+    //       }
+    //     }
+    //   }
+    // }
 
     &Inspiration {
       display: flex;
@@ -151,79 +153,82 @@
         }
       }
     }
-    &Shop {
-      box-shadow: 0px 1px 26px 0px rgba(89, 89, 89, 0.1);
-      padding: 60px 0 0;
-      margin: 0;
 
-      &Title {
-        font-size: 70px;
-        text-align: center;
-        text-transform: uppercase;
-        margin: 50px 0 50px;
-      }
-      h3 {
-        font-size: 26px;
-        line-height: 32px;
-      }
+/** UNCOMMENT IF SHOP IS BACK IN HOMEPAGE **/
 
-      &Category {
-        flex-direction: column;
-        margin: 0 auto 110px;
+    // &Shop {
+    //   box-shadow: 0px 1px 26px 0px rgba(89, 89, 89, 0.1);
+    //   padding: 60px 0 0;
+    //   margin: 0;
 
-        &Items {
-          position: relative;
-          max-width: calc(1080px / 3);
-          width: calc(100vw - 120px);
-          cursor: pointer;
-          margin: 40px auto;
+    //   &Title {
+    //     font-size: 70px;
+    //     text-align: center;
+    //     text-transform: uppercase;
+    //     margin: 50px 0 50px;
+    //   }
+    //   h3 {
+    //     font-size: 26px;
+    //     line-height: 32px;
+    //   }
 
-          &Hover {
-            position: absolute;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            width: 100%;
-            // height: 100%;
-            // background-color: #f5e77a;
+    //   &Category {
+    //     flex-direction: column;
+    //     margin: 0 auto 110px;
 
-            p {
-              font-size: 35px;
-            }
-          }
+    //     &Items {
+    //       position: relative;
+    //       max-width: calc(1080px / 3);
+    //       width: calc(100vw - 120px);
+    //       cursor: pointer;
+    //       margin: 40px auto;
 
-          &Hover {
-            display: flex;
-            align-content: flex-end;
-            background-color: unset;
-            p {
-              width: 100%;
-              background-color: #f5e77a;
-              padding: 12px;
-              position: absolute;
-              text-align: center;
-              bottom: 25px;
-              font-size: 26px;
-            }
-          }
+    //       &Hover {
+    //         position: absolute;
+    //         display: none;
+    //         align-items: center;
+    //         justify-content: center;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         // height: 100%;
+    //         // background-color: #f5e77a;
 
-          &Image {
-            &Element {
-              width: 100%;
-            }
-          }
-        }
-      }
-      &Inspiration {
-        padding: 80px 30px 100px;
-      &Description {
-        font-size: 16px;
-        line-height: 29px;
-      }
-    }
-    }
+    //         p {
+    //           font-size: 35px;
+    //         }
+    //       }
+
+    //       &Hover {
+    //         display: flex;
+    //         align-content: flex-end;
+    //         background-color: unset;
+    //         p {
+    //           width: 100%;
+    //           background-color: #f5e77a;
+    //           padding: 12px;
+    //           position: absolute;
+    //           text-align: center;
+    //           bottom: 25px;
+    //           font-size: 26px;
+    //         }
+    //       }
+
+    //       &Image {
+    //         &Element {
+    //           width: 100%;
+    //         }
+    //       }
+    //     }
+    //   }
+    //   &Inspiration {
+    //     padding: 80px 30px 100px;
+    //   &Description {
+    //     font-size: 16px;
+    //     line-height: 29px;
+    //   }
+    // }
+    // }
   }
 }
 
