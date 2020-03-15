@@ -3,6 +3,7 @@
 .home {
   &Header {
     height: 100vh;
+
     &Container {
       &Items {
         position: relative;
@@ -10,12 +11,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         img {
           position: absolute;
           margin: 0 auto;
           left: calc(50% - 200px);
           width: 400px;
         }
+
         h1 {
           display: flex;
           justify-content: center;
@@ -33,97 +36,11 @@
           font-size: 34px;
           text-align: center;
           letter-spacing: 0.5px;
+
           span {
             color: #f5e77a;
           }
         }
-      }
-    }
-  }
-
-/** UNCOMMENT IF SHOP IS BACK IN HOMEPAGE **/
-
-  &Shop {
-   @include max-margin;
-
-    // &Title {
-    //   font-size: 70px;
-    //   text-align: center;
-    //   text-transform: uppercase;
-    //   margin: 210px 0 115px;
-    // }
-    // h3 {
-    //   font-style: normal;
-    //   font-weight: normal;
-    //   font-size: 36px;
-    //   line-height: 44px;
-    //   text-align: center;
-    //   margin-bottom: 70px;
-    // }
-
-    // &Category {
-    //   display: flex;
-    //   flex-direction: row;
-    //   justify-content: space-around;
-    //   flex-wrap: nowrap;
-    //   margin: 0 auto 150px;
-    //   max-width: 1240px;
-
-    //   &Items {
-    //     position: relative;
-    //     max-width: calc(1080px / 3);
-    //     width: calc((100vw - 120px) / 3);
-    //     cursor: pointer;
-
-    //     &Hover {
-    //       position: absolute;
-    //       display: none;
-    //       align-items: center;
-    //       justify-content: center;
-    //       top: 0;
-    //       left: 0;
-    //       width: 100%;
-    //       height: 100%;
-    //       background-color: #f5e77a;
-
-    //       p {
-    //         font-size: 35px;
-    //       }
-    //     }
-
-    //     &:hover > &Hover {
-    //       display: flex;
-    //     }
-
-    //     &Image {
-    //       &Element {
-    //         width: calc((100vw - 120px) / 3);
-    //         max-width: calc(1080px / 3);
-    //       }
-    //     }
-    //   }
-    // }
-
-    &Inspiration {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 0;
-      padding: 137px 0;
-      background-color: $yellow;
-
-      &Title {
-        text-align: center;
-        font-size: 45px;
-        margin: 0 0 55px;
-      }
-
-      &Description {
-        font-size: 22px;
-        line-height: 33px;
-        max-width: 1240px;
-        margin: 0 auto;
-        text-align: center;
       }
     }
   }
@@ -138,6 +55,7 @@
             left: calc(50% - 135px);
             width: 270px;
           }
+
           h1 {
             font-size: 55px;
             line-height: 65px;
@@ -153,82 +71,6 @@
         }
       }
     }
-
-/** UNCOMMENT IF SHOP IS BACK IN HOMEPAGE **/
-
-    // &Shop {
-    //   box-shadow: 0px 1px 26px 0px rgba(89, 89, 89, 0.1);
-    //   padding: 60px 0 0;
-    //   margin: 0;
-
-    //   &Title {
-    //     font-size: 70px;
-    //     text-align: center;
-    //     text-transform: uppercase;
-    //     margin: 50px 0 50px;
-    //   }
-    //   h3 {
-    //     font-size: 26px;
-    //     line-height: 32px;
-    //   }
-
-    //   &Category {
-    //     flex-direction: column;
-    //     margin: 0 auto 110px;
-
-    //     &Items {
-    //       position: relative;
-    //       max-width: calc(1080px / 3);
-    //       width: calc(100vw - 120px);
-    //       cursor: pointer;
-    //       margin: 40px auto;
-
-    //       &Hover {
-    //         position: absolute;
-    //         display: none;
-    //         align-items: center;
-    //         justify-content: center;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         // height: 100%;
-    //         // background-color: #f5e77a;
-
-    //         p {
-    //           font-size: 35px;
-    //         }
-    //       }
-
-    //       &Hover {
-    //         display: flex;
-    //         align-content: flex-end;
-    //         background-color: unset;
-    //         p {
-    //           width: 100%;
-    //           background-color: #f5e77a;
-    //           padding: 12px;
-    //           position: absolute;
-    //           text-align: center;
-    //           bottom: 25px;
-    //           font-size: 26px;
-    //         }
-    //       }
-
-    //       &Image {
-    //         &Element {
-    //           width: 100%;
-    //         }
-    //       }
-    //     }
-    //   }
-    //   &Inspiration {
-    //     padding: 80px 30px 100px;
-    //   &Description {
-    //     font-size: 16px;
-    //     line-height: 29px;
-    //   }
-    // }
-    // }
   }
 }
 
@@ -236,13 +78,16 @@
   .home {
     &Header {
       height: 100vh;
+
       &Container {
         &Items {
           margin: 0 15px;
+
           img {
             left: calc(50% - 125px);
             width: 250px;
           }
+
           h1 {
             font-size: 45px;
             line-height: unset;
@@ -255,79 +100,6 @@
             line-height: 17px;
             letter-spacing: 0.5px;
           }
-        }
-      }
-    }
-    &Shop {
-      box-shadow: 0px 1px 26px 0px rgba(89, 89, 89, 0.1);
-      padding: 35px 0 0;
-      margin: 0;
-
-      &Title {
-        font-size: 40px;
-        line-height: 42px;
-        margin: 50px 0;
-      }
-      h3 {
-        font-size: 22px;
-        line-height: 22px;
-        margin-bottom: 55px;
-      }
-
-      &Category {
-        flex-direction: column;
-        padding: 0 40px;
-        margin: 0;
-
-        &Items {
-          position: relative;
-          width: 100%;
-          cursor: pointer;
-          margin: 0 auto 40px;
-
-          &Hover {
-            position: absolute;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            width: 100%;
-            // height: 100%;
-            // background-color: #f5e77a;
-
-            p {
-              font-size: 35px;
-            }
-          }
-
-          &Hover {
-            display: flex;
-            align-content: flex-end;
-            background-color: unset;
-            p {
-              width: 100%;
-              background-color: #f5e77a;
-              padding: 12px;
-              position: absolute;
-              text-align: center;
-              bottom: 25px;
-              font-size: 26px;
-            }
-          }
-
-          &Image {
-            &Element {
-              width: 100%;
-            }
-          }
-        }
-      }
-      &Inspiration {
-          padding: 50px 20px;
-        &Description {
-          font-size: 16px;
-          line-height: 23px;
         }
       }
     }

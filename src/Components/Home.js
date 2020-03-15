@@ -32,8 +32,8 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="homeShop">
-          <div>
+        <div className="homeCat">
+          <div className="homeCatContainer">
             <Title title="Le Project" />
             <Text text={text} />
             <Summary
